@@ -1,8 +1,15 @@
 .LayoutCont {
     width: 100%;
     min-height: 100vh;
-    background-color: #2b3346;
+    /* background-color: #2b3346; */
+    background-color: #363645;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.Cont{
+    width: 100%;
+    height: auto;
+    padding-top: 10vh;
 }
