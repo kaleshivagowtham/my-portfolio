@@ -23,7 +23,7 @@ export default function HomeComponent() {
 
     const PageLoad = useMemo(() => {
         setCurrPage(router.pathname)
-        console.log(currPage);
+        // console.log(currPage);
     },[router.pathname])
 
     // const sizeCheck = useMemo(() => {
