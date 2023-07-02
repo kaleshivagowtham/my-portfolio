@@ -15,10 +15,10 @@ export default function HomeComponent() {
             <div className={styles.topCont}>
                 <div className={styles.topContBackgroundCircle}></div>
                 <div className={styles.topLeftCont}>
-                    <p className={styles.topText1}>I'm</p>
+                    <p className={styles.topText1}>{"I'm"}</p>
                     <h1 className={styles.topName}>Shiva Gowtham </h1>
                     <h1 className={styles.topName} style={{borderBottom:'2px solid #fcba0a'}}>Kale</h1>
-                    <p className={styles.topText2}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gall</p>
+                    <p className={styles.topText2}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a gall</p>
                 </div>
                 <div className={styles.topRightCont}>
                     <p className={styles.topText2}>services</p>
