@@ -1,5 +1,6 @@
 import styles from './styles.module.css';
 import Link from 'next/link';
+import AboutMeComponent from '../AboutMeComponent';
 
 export default function HomeComponent() {
 
@@ -37,10 +38,18 @@ export default function HomeComponent() {
                     </div>
                 </div>
                 <div className={styles.topDownCont}>
-                    {/* <div className={styles.topDownCont}></div> */}
+                    <a href='https://leetcode.com/shivakale/' target='_blank'>
+                        <img src='/leetcodeLogo.png' className={styles.topDownContImg} alt='shivakale leetcode profile' />
+                    </a>
+                    <a href='https://github.com/kaleshivagowtham/' target='_blank'>
+                        <img src='/gitHubLogo.png' className={styles.topDownContImg} alt='shivakale leetcode profile' />
+                    </a>
+                    <a href='https://www.hackerrank.com/mailongowthu?hr_r=1' target='_blank'>
+                        <img src='/hackerRankLogo.png' className={styles.topDownContImg} alt='shivakale leetcode profile' />
+                    </a>
                 </div>
             </div>
-            
+            <AboutMeComponent />
         </div>
     )
 }
