@@ -4,6 +4,7 @@
     /* background-color: #2b3346; */
     background-color: #363645;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }

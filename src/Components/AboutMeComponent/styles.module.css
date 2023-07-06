@@ -1,0 +1,147 @@
+.wholeCont{
+    width: 95%;
+    min-height: 100vh;
+    margin: 0 2.5%;
+    padding: 5vh 0;
+    border-radius: 12px;
+    background-color: #2b3346;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.title{
+    width: max-content;
+    height: auto;
+    padding: 1.5vh 15vh;
+    border-radius: 12px;
+    background-color: #393644;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.cont{
+    width: 95%;
+    min-height: 70vh;
+    margin: 0 2.5%;
+    padding: 5vh 0;
+    border-radius: 12px;
+    gap: 5%;
+    background-color: #2b3346;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftCont{
+    width: 45%;
+    height: 60vh;
+    display: block;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.leftContText1 {
+    width: max-content;
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin: 2vh 0 4vh 0;
+}
+
+.leftContText2 {
+    font-size: 0.75rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+.rightCont{
+    width: 40%;
+    min-height: 60vh;
+    border-radius: 12px;
+    background-color: #393644;
+    padding:0 0 2vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.rightBottomCont{
+    width: 95%;
+    min-height: 45vh;
+}
+
+.eachSkillSet{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin: 1vh 0;
+}
+
+.eachSkill{
+    position: relative;
+    width: max-content;
+    border-radius: 5px;
+    padding: 1vh 2vh;
+    margin: 1vh;
+    background-color: #2b3346;
+    cursor: pointer;
+    gap: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.eachSkillName{
+    width: max-content;
+    height: auto;
+    margin: 0;
+    font-size: 1rem;
+    color: #fcba0a;
+}
+
+.eachSkillImg{
+    position: relative;
+    height: 6vh;
+    width: auto;
+
+}
+
+@media screen and (max-width: 900px) {
+    .leftCont{
+        width: 30%;
+    }
+    .rightCont{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .cont{
+        flex-direction: column;
+    }
+    .title{
+        font-size: 1.75rem;
+    }
+    .leftCont {
+        width: 100%;
+        height: auto;
+        margin-bottom: 5vh;
+    }
+    .leftContText1{
+        font-size: 1.5rem;
+    }
+    .leftContText2{
+        font-size: 1rem;
+    }
+
+    .rightCont {
+        width: 100%;
+    }
+}
