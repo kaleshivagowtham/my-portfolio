@@ -2,15 +2,109 @@
     width: 100%;
     min-height: 100vh;
     /* background-color: #2b3346; */
-    background-color: #363645;
+    /* background-color: #363645; */
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+.LayoutContDark{
+    background-color: #363645;
+}
 
 .Cont{
     width: 100%;
     height: auto;
-    padding-top: 10vh;
+}
+
+.darkModeCont{
+    position: fixed;
+    width: 6vh;
+    height: 3vh;
+    border-radius: 25px;
+    z-index: 10;
+    top: 12.5vh;
+    right: 5vh;
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: rgb(255, 255, 255);
+    -webkit-box-shadow: inset 0px 0px 30px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 30px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 30px -10px rgba(0, 0, 0, 0.75);
+    border: 2px solid #808080;
+    display: flex;
+    align-items: center;
+}
+
+.darkModeContOn{
+    border: 2px solid white;
+    /* background-color: none; */
+    /* background-image: url('../public/moonIcon.png'); */
+    /* background-size: cover; */
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+.darkModeSun{
+    position: absolute;
+    width: calc(3vh - 2px);
+    height: calc(3vh - 2px);
+    border-radius: 50%;
+    /* background-color: #ffc400; */
+    animation: darkModeOff 0.75s forwards ease-in-out;
+}
+.darkModeMoon{
+    background-color: #2b3346;
+    animation: darkModeOn 0.75s forwards ease-in-out;
+}
+
+.contactMeButton{
+    position: fixed;
+    width: 15vh;
+    height: 6vh;
+    bottom: 5vh;
+    right: 5vh;
+    border-radius: 12px;
+    background-color: #363645;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.contactMeText{
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+@keyframes darkModeOn {
+    0%{
+        background-color: #ffc400;
+        left: 0;
+    }
+    99%{
+        background-color: #363645;
+        left: calc(3vh - 2px);
+    }
+    100%{
+        right: 0;
+    }
+}
+@keyframes darkModeOff {
+    0% {
+        background-color: #363645;
+        right: 0;
+    }
+    100% {
+        background-color: #ffc400;
+        right: calc(3vh - 2px);
+    }
+}
+
+@media screen and (max-width: 500px){
+    .darkModeCont{
+        top: 2.5vh;
+        right: 12.5vh;
+    }
 }

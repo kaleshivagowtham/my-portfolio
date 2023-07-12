@@ -4,11 +4,14 @@
     margin: 0 2.5%;
     padding: 5vh 0;
     border-radius: 12px;
-    background-color: #2b3346;
+    background-color: #333333;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+}
+.wholeContDark{
+    background-color: #2b3346;
 }
 
 .title{
@@ -16,11 +19,14 @@
     height: auto;
     padding: 1.5vh 15vh;
     border-radius: 12px;
-    background-color: #393644;
+    /* background-color: #393644; */
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 500;
     white-space: nowrap;
+}
+.titleDark{
+    background-color: #393644;
 }
 
 .cont{
@@ -30,10 +36,13 @@
     padding: 5vh 0;
     border-radius: 12px;
     gap: 5%;
-    background-color: #2b3346;
+    background-color: #333333;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.contDark{
+    background-color: #2b3346;
 }
 
 .leftCont{
@@ -61,12 +70,15 @@
     width: 40%;
     min-height: 60vh;
     border-radius: 12px;
-    background-color: #393644;
+    background-color: #525252;
     padding:0 0 2vh 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+}
+.rightContDark{
+    background-color: #393644;
 }
 
 .rightBottomCont{
@@ -90,12 +102,15 @@
     border-radius: 5px;
     padding: 1vh 2vh;
     margin: 1vh;
-    background-color: #2b3346;
+    background-color: #333333;
     cursor: pointer;
     gap: 2vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+.eachSkillDark{
+    background-color: #2b3346;
 }
 
 .eachSkillName{
