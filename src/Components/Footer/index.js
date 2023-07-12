@@ -1,12 +1,15 @@
 import styles from './styles.module.css';
 import Link from 'next/link';
 import Headers from 'next/head';
+import { useSelector } from 'react-redux';
 
 export default function Footer() {
 
+    const {darkMode} = useSelector(store => store.darkMode);
+
 
     return (
-        <div className={styles.wholeCont}>
+        <div className={`${styles.wholeCont} ${darkMode ? styles.wholeContDark : ''}`}>
             <Headers>
 
             </Headers>
@@ -18,13 +21,13 @@ export default function Footer() {
                 <div className={styles.topRightCont}>
                     <p className={styles.topContText3}> Social</p>
                     <div className={styles.topRightSocialCont}>
-                        <a href='https://shivakale.netlify.app/' className={styles.topRightSocialEachCont} target='_blank'>
+                        <a href='https://shivakale.netlify.app/' className={`${styles.topRightSocialEachCont} ${darkMode ? styles.topRightSocialEachContDark : ''}`} target='_blank'>
                             <img src='/facebookLogo.png' className={styles.topRightSocialEachImg} alt='Facebook logo' />
                         </a>
-                        <a href='https://shivakale.netlify.app/' className={styles.topRightSocialEachCont} target='_blank'>
+                        <a href='https://shivakale.netlify.app/' className={`${styles.topRightSocialEachCont} ${darkMode ? styles.topRightSocialEachContDark : ''}`} target='_blank'>
                             <img src='/linkedinLogo.png' className={styles.topRightSocialEachImg} alt='Facebook logo' />
                         </a>
-                        <a href='https://shivakale.netlify.app/' className={styles.topRightSocialEachCont} target='_blank'>
+                        <a href='https://shivakale.netlify.app/' className={`${styles.topRightSocialEachCont} ${darkMode ? styles.topRightSocialEachContDark : ''}`} target='_blank'>
                             <img src='/twitterLogo.png' className={styles.topRightSocialEachImg} alt='Facebook logo' />
                         </a>
                     </div>

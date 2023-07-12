@@ -1,5 +1,6 @@
 .wholeCont {
     width: 100%;
+    padding-top: 10vh;
     min-height: 90vh;
     display: flex;
     flex-direction: column;
@@ -20,15 +21,20 @@
     aspect-ratio: 1/1;
     /* border: 1px solid white; */
     border-radius: 50%;
-    background-color: #2b3346;
+    /* background-color: #333333; */
+    background-color: #c26d6d;
     background-image: url('../../../public/background-img1.png');
     filter: grayscale(0%);
     background-repeat: no-repeat;
     background-position: top;
     background-attachment: fixed;
     background-size: auto 150%;
-    background-blend-mode: luminosity;
+    /* background-blend-mode: luminosity; */
     z-index: 0;
+}
+.topContBackgroundCircleDark{
+    background-blend-mode: luminosity;
+    background-color: #2b3346;
 }
 
 .topLeftCont{
@@ -44,19 +50,25 @@
     margin: 0;
     font-weight: 200;
     font-size: 3.5rem;
-    color: #c5c5c5;
+    color: #333333;
     user-select: none;
+}
+.topText1Dark{
+    color: #c5c5c5;
 }
 
 .topName{
     width: 50%;
     font-size: 2.5rem;
-    color: #ffffff;
+    color: #333333;
     margin: 0;
     white-space: nowrap;
     font-weight: 700;
     /* text-decoration: underline 2px solid #043199; */
     /* border-bottom: 2px solid #bbab1c; */
+}
+.topNameDark{
+    color: #ffffff;
 }
 
 .topText2 {
@@ -64,7 +76,13 @@
     height: auto;
     margin: 1.5vh 0;
     font-size: 1rem;
-    color: #c5c5c5;
+    color: #333333;
+    /* backdrop-filter: blur(0px) saturate(169%);
+    -webkit-backdrop-filter: blur(0px) saturate(169%);
+    background-color: rgba(255, 255, 255, 0.5); */
+}
+.topText2Dark{
+    color: #ffffff;
 }
 
 .topRightCont {
@@ -80,6 +98,13 @@
     height: auto;
     margin: 1.75vh 0;
     font-size: 1.25rem;
+    color: #333333;
+    /* backdrop-filter: blur(0px) saturate(169%);
+    -webkit-backdrop-filter: blur(0px) saturate(169%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 12px; */
+}
+.topText3Dark{
     color: #ffffff;
 }
 
@@ -116,11 +141,14 @@
     width: 5.6vh;
     height: 5.6vh;
     border-radius: 25%;
-    background-color: #454557;
+    background-color: #525252;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+.topRightSocialEachContDark{
+    background-color: #454557;
 }
 .topRightSocialEachCont:hover{
     box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.10);
@@ -144,12 +172,15 @@
     width: 70%;
     height: 16vh;
     bottom: -4vh;
-    background-color: #2b3346;
+    background-color: #333333;
     box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20%;
+}
+.topDownContDark{
+    background-color: #2b3346;
 }
 
 .topDownContImg{

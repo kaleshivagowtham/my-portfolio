@@ -1,0 +1,213 @@
+.wholeCont{
+    position: fixed;
+    background-color: #ffffff;
+    bottom: 5vh;
+    right: 5vh;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    animation: chatBoxOpen 1s forwards ease-in-out;
+    z-index: 10;
+}
+.wholeContClose{
+    animation: chatBoxClose 1s forwards ease-in-out;
+}
+.wholeContDark{
+    background-color: #747474;
+}
+
+.x{
+    position: absolute;
+    right: 1vh;
+    top: 1vh;
+    width: 3.5vh;
+    height: 3.5vh;
+    margin: 0;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleCont{
+    width: 100%;
+    height: 6vh;
+    background-color: #363645;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.chatBoxTitle{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.chatCont{
+    position: relative;
+    width: 100%;
+    height: 39vh;
+    border-radius: 0 0 12px 12px;
+}
+.chatContClose{
+    width: 100%;
+    height: 0;
+    display: none;
+}
+
+.mailInputCont{
+    position: relative;
+    width: 95%;
+    height: 6vh;
+    margin-left: 2.5%;
+}
+
+.mailInputTitle{
+    position: absolute;
+    font-size: 1rem;
+    font-weight: 400;
+    z-index: 10;
+    left: 1vh;
+    top: 3vh;
+    color: #363645;
+    font-weight: 500;
+}
+.mailInputTitleOnClick{
+    animation: inputTitleSlideUp 0.5s forwards ease-in-out;
+}
+.mailInputTitleDark{
+    color: #ffffff;
+    font-weight: 400;
+}
+.mailInputTitleDarkOnClick{
+    animation: inputTitleSlideUpDark 0.5s forwards ease-in-out;
+}
+
+.mailInput{
+    width: 95%;
+    height: 6vh;
+    top: 1vh;
+    outline: none;
+    border: none;
+    text-indent: 1vh;
+    margin: 0 2.5%;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.09);
+    overflow-y: scroll;
+    color: #363645;
+}
+.mailInputOnClick{
+    background-color: transparent;
+    border: 2px solid #363645;
+}
+.mailInputDarkOnCLick{
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.mailInput::-webkit-scrollbar {
+    width: 5px;
+    cursor: pointer;
+}
+/* Track */
+.mailInput::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(255, 255, 255);
+    border-radius: 12px;
+    cursor: pointer;
+}
+/* Handle */
+.mailInput::-webkit-scrollbar-thumb {
+    background: #2b3346;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* Handle on hover  */
+.mailInput::-webkit-scrollbar-thumb:hover {
+    background: #3f4b66;
+}
+
+.sendButton{
+    position: absolute;
+    width: 10vh;
+    height: 5vh;
+    bottom: 1vh;
+    right:3vh;
+    background-color: #363645;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.sendButton:hover{
+    opacity: 0.9;
+}
+.sendButton:active{
+    opacity: 0.7;
+}
+
+@keyframes chatBoxOpen {
+    0%{
+        width: 15vh;
+        height: 6vh;
+    }
+    50%{
+        width: 40vh;
+        height: 6vh;
+    }
+    100%{
+        width: 40vh;
+        height: 50vh;
+    }
+}
+
+@keyframes chatBoxClose {
+    0% {
+        width: 40vh;
+        height: 50vh;
+    }
+
+    50% {
+        width: 40vh;
+        height: 6vh;
+    }
+
+    100% {
+        width: 15vh;
+        height: 6vh;
+    }
+}
+
+@keyframes inputTitleSlideUp {
+    0%{
+        font-size: 1rem;
+        top: 3vh;
+    }
+    100%{
+        top: 1vh;
+        font-size: 0.75rem;
+        background-color: #ffffff;
+        padding: 0 0.5vh;
+    }
+}
+@keyframes inputTitleSlideUpDark {
+    0% {
+        font-size: 1rem;
+        top: 3vh;
+    }
+
+    100% {
+        top: 1vh;
+        font-size: 0.75rem;
+        background-color: #747474;
+        padding: 0 0.5vh;
+    }
+}
