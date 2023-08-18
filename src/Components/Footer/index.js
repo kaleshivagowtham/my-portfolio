@@ -16,7 +16,11 @@ export default function Footer() {
             <div className={styles.topCont}>
                 <div className={styles.topLeftCont}>
                     <h1 className={styles.topContText1}> Shiva Gowtham Kale</h1>
-                    <p className={styles.topContText2}> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a gall</p>
+                    <p className={styles.topContText2}> 
+                        I am a BE student passion out in 2024.<br />
+                        I am confident with not only my technical but also non-technical skills.<br />
+                        I am also a very social person and am good at mixing in with new people.<br />
+                    </p>
                 </div>
                 <div className={styles.topRightCont}>
                     <p className={styles.topContText3}> Social</p>

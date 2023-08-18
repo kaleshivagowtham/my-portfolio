@@ -13,7 +13,7 @@ export default function HomeComponent({scrollRefME}) {
                     <p className={`${styles.topText1} ${darkMode ? styles.topText1Dark : ''}`}>{"I'm"}</p>
                     <h1 className={`${styles.topName} ${darkMode ? styles.topNameDark : ''}`}>Shiva Gowtham </h1>
                     <h1 className={`${styles.topName} ${darkMode ? styles.topNameDark : ''}`} style={{borderBottom:'2px solid #fcba0a'}}>Kale</h1>
-                    <p className={`${styles.topText2} ${darkMode ? styles.topText2Dark : ''}`}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a gall</p>
+                    <p className={`${styles.topText2} ${darkMode ? styles.topText2Dark : ''}`}>I am a BE student passion out in 2024. I have actively participated and organized multiple events under the clubs like Rotaract club and Coders Club in our college. </p>
                 </div>
                 <div className={styles.topRightCont}>
                     <p className={`${styles.topText2} ${darkMode ? styles.topText2Dark : ''}`}>services</p>
