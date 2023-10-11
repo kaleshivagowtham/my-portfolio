@@ -3,7 +3,7 @@ import styles from './styles.module.css';
 import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
 
-export default function NavBar({currView , setCurrView , scrollRefME , scrollRefABOUTME , scrollRefPROJECTS }) {
+export default function NavBar({currView, setCurrView, scrollRefME, scrollRefABOUTME, scrollRefPROJECTS, scrollRefEXPERIENCE }) {
 
     const dispatch = useDispatch();
     const {darkMode} = useSelector(store => store.darkMode);
@@ -29,6 +29,8 @@ export default function NavBar({currView , setCurrView , scrollRefME , scrollRef
             scrollRefME.current?.scrollIntoView({behaviour : 'smooth'});
         if(currView === 'PROJECTS')
             scrollRefPROJECTS.current?.scrollIntoView({behaviour : 'smooth'});
+        if( currView === 'EXPERIENCE')
+            scrollRefEXPERIENCE.current ?.scrollIntoView({behaviour : 'smooth'});
     },[currView]);
 
     // const scroller2 = useMemo(() => {

@@ -1,6 +1,6 @@
 import styles from './styles.module.css';
 import Link from 'next/link';
-import Headers from 'next/head';
+import Head from 'next/head';
 import { useSelector } from 'react-redux';
 
 export default function Footer() {
@@ -10,9 +10,16 @@ export default function Footer() {
 
     return (
         <div className={`${styles.wholeCont} ${darkMode ? styles.wholeContDark : ''}`}>
-            <Headers>
-
-            </Headers>
+            <Head>
+                <title>Shiva Gowtham Kale</title>
+                <link rel="profile image" href="/MyPortfolio.png" />
+                <meta charset="UTF-8" />
+                <meta name="description" content="Web developer portfolio website"/>
+                <meta name="keywords" content="HTML, CSS, JavaScript, Next.js, Reactjs, profile, shiva, gowtham, kale, web developer, recruitment
+                    jobs, job, portfolio, MERN stack, NodeJs, ExpressJs, c++, mysql, cpp, MongoDb"/>
+                <meta name="author" content="Shiva Gowtham Kale"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            </Head>
             <div className={styles.topCont}>
                 <div className={styles.topLeftCont}>
                     <h1 className={styles.topContText1}> Shiva Gowtham Kale</h1>

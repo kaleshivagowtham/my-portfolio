@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import Head from 'next/head';
 import styles from './styles.module.css';
 import Link from 'next/link';
 
@@ -13,6 +14,16 @@ export default function AboutMeComponent({scrollRefABOUTME , currView}) {
     return (
         <div className={`${styles.wholeCont} ${darkMode ? styles.wholeContDark : ''}`} 
             ref={scrollRefABOUTME}>
+            <Head>
+                <title>Shiva Gowtham Kale</title>
+                <link rel="profile image" href="/MyPortfolio.png" />
+                <meta charset="UTF-8" />
+                <meta name="description" content="Web developer portfolio website"/>
+                <meta name="keywords" content="HTML, CSS, JavaScript, Next.js, Reactjs, profile, shiva, gowtham, kale, web developer, recruitment
+                    jobs, job, portfolio, MERN stack, NodeJs, ExpressJs, c++, mysql, cpp, MongoDb"/>
+                <meta name="author" content="Shiva Gowtham Kale"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            </Head>
             <p className={`${styles.title} ${darkMode ? styles.titleDark : ''}`}>Why Me?</p>
             <div className={`${styles.cont} ${darkMode ? styles.contDark : ''}`}>
                 <div className={styles.leftCont}>
