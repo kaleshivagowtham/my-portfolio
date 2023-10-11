@@ -9,6 +9,7 @@ import AboutMeComponent from '../AboutMeComponent';
 import ProjectsComponent from '../ProjectsComponent';
 import Head from 'next/head';
 import ContactMe from '../ContactMe';
+import ExperienceComponent from '../ExperienceComponent';
 
 export default function Layout({children}) {
 
@@ -30,7 +31,14 @@ export default function Layout({children}) {
     return (
         <div className={`${styles.LayoutCont} ${darkMode ? styles.LayoutContDark : ''}`} onClick={e => setContactMe(false)}>
             <Head>
-                <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>Shiva Gowtham Kale</title>
+                <link rel="profile image" href="/MyPortfolio.png" />
+                <meta charset="UTF-8" />
+                <meta name="description" content="Web developer portfolio website"/>
+                <meta name="keywords" content="HTML, CSS, JavaScript, Next.js, Reactjs, profile, shiva, gowtham, kale, web developer, recruitment
+                    jobs, job, portfolio, MERN stack, NodeJs, ExpressJs, c++, mysql, cpp, MongoDb"/>
+                <meta name="author" content="Shiva Gowtham Kale"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             </Head>
             <NavBar currView={currView} setCurrView={setCurrView} scrollRefME={scrollRefME}
                 scrollRefPROJECTS={scrollRefPROJECTS} scrollRefABOUTME={scrollRefABOUTME} scrollRefEXPERIENCE={scrollRefEXPERIENCE}
@@ -45,8 +53,8 @@ export default function Layout({children}) {
                 <HomeComponent scrollRefME={scrollRefME} />
                 <AboutMeComponent scrollRefABOUTME={scrollRefABOUTME} />
                 <ProjectsComponent scrollRefPROJECTS={scrollRefPROJECTS}/>
-
-                    <ContactMe contactMe={contactMe} setContactMe={setContactMe}/> 
+                <ContactMe contactMe={contactMe} setContactMe={setContactMe}/>
+                <ExperienceComponent scrollRefEXPERIENCE={scrollRefEXPERIENCE}/>
                     
             </div>
             <Footer />

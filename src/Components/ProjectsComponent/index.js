@@ -1,15 +1,27 @@
 import { useSelector } from 'react-redux';
 import styles from './styles.module.css';
+import Head from 'next/head';
 
 export default function ProjectsComponent({scrollRefPROJECTS}) {
 
     const {darkMode} = useSelector(store => store.darkMode);
-    const projects =[{'title' : 'My Portfolio','link' : 'https://shivakale.netlify.app/','img':'MyPortfolio.png', 'desc' : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution'},
-                    {'title' : 'Divine Classical Homeopathy','link' : 'https://divineclassicalhomoeopathy.com/','img':'divineClassicalHomeopathy.png', 'desc' : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution'},
-                    {'title' : 'My Portfolio','link' : 'https://shivakale.netlify.app/','img':'MyPortfolio.png', 'desc' : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution'}];
+    const projects =[{'title' : 'My Portfolio','link' : 'https://shivakale.netlify.app/','img':'MyPortfolio.png', 'desc' : 'As a developer and a freelancer I have acquired multiple skills, and created multiple projects. And this is where you can find all of my professional experience I have as a web developer.'},
+                    {'title' : 'Divine Classical Homeopathy','link' : 'https://divineclassicalhomoeopathy.com/','img':'divineClassicalHomeopathy.png', 'desc' : 'It is a website I have built as a freelance web developer, for a homeopathy clinic. This website is highly optimized in terms of SEO.'},
+                    {'title' : 'Storry Teller','link' : 'https://storryteller.netlify.app/','img':'StorryTellerImg.png', 'desc' : 'It a still undergoing website, which I believe will change our perspective to the series or anime that we watch just for fun. It is like an open-source version of novel writing, where you can contribute and accept contributions from others.'}];
 
     return (
         <div className={styles.wholeCont} ref={scrollRefPROJECTS}>
+            <Head>
+                <title>Shiva Gowtham Kale</title>
+                <link rel="profile image" href="/MyPortfolio.png" />
+                <meta charset="UTF-8" />
+                <meta name="description" content="Web developer portfolio website"/>
+                <meta name="keywords" content="HTML, CSS, JavaScript, Next.js, Reactjs, profile, shiva, gowtham, kale, web developer, recruitment
+                    jobs, job, portfolio, MERN stack, NodeJs, ExpressJs, c++, mysql, cpp, MongoDb, projects, web projects, experience
+                    developer"/>
+                <meta name="author" content="Shiva Gowtham Kale"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            </Head>
             <h1 className={`${styles.title} ${darkMode ? styles.titleDark : ''}`}>My Projects</h1>
             <div className={styles.cont}>
             {
