@@ -79,8 +79,9 @@
 }
 
 .desc {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: 1vh 0 0 0;
+    white-space: pre-wrap;
 }
 
 .showMoreButton {

@@ -1,10 +1,27 @@
 import styles from './styles.module.css';
 import Head from 'next/head';
+import { useEffect, useMemo, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 export default function HomeComponent({scrollRefME}) {
 
     const {darkMode} = useSelector(store => store.darkMode);
+
+    const [name, setName] = useState('');
+    const [i, setI] = useState(-1);
+    const nm = 'Shiva Gowtham \nKale';
+
+    useEffect(() => {
+        setI(0);
+    },[])
+
+    const nameAdder = useMemo (() => {
+        setTimeout(() => {
+            setName(name + nm[i]);
+            if(i < 18)
+                setI(i+1);
+        },200)
+    },[i]);
 
     return (
         <div className={styles.wholeCont} ref={scrollRefME}>
@@ -22,8 +39,7 @@ export default function HomeComponent({scrollRefME}) {
                 <div className={`${styles.topContBackgroundCircle} ${darkMode ? styles.topContBackgroundCircleDark : ''}`}></div>
                 <div className={styles.topLeftCont}>
                     <p className={`${styles.topText1} ${darkMode ? styles.topText1Dark : ''}`}>{"I'm"}</p>
-                    <h1 className={`${styles.topName} ${darkMode ? styles.topNameDark : ''}`}>Shiva Gowtham </h1>
-                    <h1 className={`${styles.topName} ${darkMode ? styles.topNameDark : ''}`} style={{borderBottom:'2px solid #fcba0a'}}>Kale</h1>
+                    <h1 className={`${styles.topName} ${darkMode ? styles.topNameDark : ''}`}>{name}</h1>
                     <p className={`${styles.topText2} ${darkMode ? styles.topText2Dark : ''}`}>I am a BE student passion out in 2024. I have actively participated and organized multiple events under the clubs like Rotaract club and Coders Club in our college. </p>
                 </div>
                 <div className={styles.topRightCont}>
@@ -31,13 +47,13 @@ export default function HomeComponent({scrollRefME}) {
                     <p className={`${styles.topText3} ${darkMode ? styles.topText3Dark : ''}`}>Lets build quality products in programming and design with my services</p>
                     <p className={styles.topText4}>show more →</p>
                     <div className={styles.topRightSocialCont}>
-                        <a href='https://shivakale.netlify.app/' className={`${styles.topRightSocialEachCont} ${darkMode ? styles.topRightSocialEachContDark : ''}`} target='_blank'>
+                        <a href='https://www.linkedin.com/in/shivagowthamkale/' className={`${styles.topRightSocialEachCont} ${darkMode ? styles.topRightSocialEachContDark : ''}`} target='_blank'>
                             <img src='/facebookLogo.png' className={styles.topRightSocialEachImg} alt='Facebook logo' />
                         </a>
-                        <a href='https://shivakale.netlify.app/' className={`${styles.topRightSocialEachCont} ${darkMode ? styles.topRightSocialEachContDark : ''}`} target='_blank'>
+                        <a href='https://www.linkedin.com/in/shivagowthamkale/' className={`${styles.topRightSocialEachCont} ${darkMode ? styles.topRightSocialEachContDark : ''}`} target='_blank'>
                             <img src='/linkedinLogo.png' className={styles.topRightSocialEachImg} alt='Facebook logo' />
                         </a>
-                        <a href='https://shivakale.netlify.app/' className={`${styles.topRightSocialEachCont} ${darkMode ? styles.topRightSocialEachContDark : ''}`} target='_blank'>
+                        <a href='https://www.linkedin.com/in/shivagowthamkale/' className={`${styles.topRightSocialEachCont} ${darkMode ? styles.topRightSocialEachContDark : ''}`} target='_blank'>
                             <img src='/twitterLogo.png' className={styles.topRightSocialEachImg} alt='Facebook logo' />
                         </a>
                     </div>

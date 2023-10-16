@@ -9,18 +9,24 @@ export default function ContactMe({setContactMe , contactMe}) {
     const [selRef, setSelRef] = useState();
     const [msgContents, setMsgContents] = useState({'mail' : '','msg' : ''});
     const [sendVisible , setSendVisible] = useState(false);
+    const [attachedDoc, setAttachedDoc] = useState([]);
 
     const changeHandler = (e) => {
         const tempMsgContents = msgContents;
         tempMsgContents[e.target.name] = e.target.value;
-        console.log(tempMsgContents);
         setMsgContents(tempMsgContents);
-        console.log(msgContents);
     }
 
     const change = useMemo(() => {
-        contactMe ? setTimeout(() => {setSendVisible(true);},1500) : setSendVisible(false);
+        contactMe ? setTimeout(() => {setSendVisible(true)},1500) : setSendVisible(false);
     },[contactMe]);
+
+    const uploadFile = (e) => {
+        const tempDocs = [...attachedDoc];
+        setAttachedDoc([...tempDocs, e.target.files[0]]);
+    }
+
+
     
     return (
         <div className = {`${styles.wholeCont} ${darkMode ? styles.wholeContDark : ''} ${!contactMe ? styles.wholeContClose : ''}`}
@@ -52,12 +58,39 @@ export default function ContactMe({setContactMe , contactMe}) {
                         Message
                     </h1>
                     <textarea name='msg' className={`${styles.mailInput} ${selRef === 'messageInput' ? `${darkMode ? styles.mailInputDarkOnCLick : styles.mailInputOnClick}`:''}`}
-                        style={{height:'25vh',maxHeight:'25vh' , maxWidth:'95%',fontSize:'1rem',padding:'1vh'}}
+                        style={{height:'55vh',maxHeight:'35vh' , maxWidth:'95%', minWidth:'95%', minHeight:'35vh',fontSize:'1rem',padding:'1vh'}}
                         onChange={e => changeHandler(e)}
                     />
                 </label>
             </div>
+            {sendVisible && 
+                <label for='upload-doc' className={styles.attachDocCont}>
+                    <img className={styles.attachmentIcon} src='/attachmentIcon.png'/>
+                    <input className={styles.docInput}
+                        type='file' id='upload-doc' 
+                        multiple
+                        onChange={uploadFile}
+                     />
+                </label>
+            }
             {sendVisible && <button className={styles.sendButton}>Send</button>}
+            {contactMe && attachedDoc.length !== 0 && 
+                <div className={`${styles.docsUploadedCont} ${darkMode ? styles.docsUploadedContDark : ''}`}>
+                    <p className={styles.docContTitle}>All Docs</p>
+                    <div className={styles.docsListCont}>
+                    {
+                        attachedDoc.map((eachFile) => {
+                            return (
+                                <div key={eachFile} className={`${styles.eachDocCont} ${darkMode ? styles.eachDocContDark : ''}`}>
+                                    <p className={`${styles.eachFileName} ${darkMode ? styles.eachFileNameDark : ''}`}>{eachFile.name}</p>
+                                    <img src='/tickMark.png' alt='tick mark for file upload' className={styles.tickMark} />
+                                </div>
+                            )
+                        })
+                    }
+                    </div>
+                </div>
+            }
         </div>
     )
 }
