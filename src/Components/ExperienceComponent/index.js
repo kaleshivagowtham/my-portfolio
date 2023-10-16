@@ -8,8 +8,8 @@ export default function ExperienceComponent ({scrollRefEXPERIENCE}) {
 
     const {darkMode} = useSelector(store => store.darkMode);
 
-    const [timeline, setTimeline] = useState([{'startDate' : 'Aug 1st 2022','endDate' : 'Jan 31st 2023', 'role' : 'Full Stack Developer Intern', 'company' : 'Bizmorphic Research pvt. ltd.', 'desc' : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'link' : ''},
-                                                {'startDate' : 'Feb 1st 2023','endDate' : 'Mar 31st 2023', 'role' : 'Web developer Freelancer', 'company' : 'Freelance', 'desc' : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'link' : ''}
+    const [timeline, setTimeline] = useState([{'startDate' : 'Aug 1st 2022','endDate' : 'Jan 31st 2023', 'role' : 'Full Stack Developer Intern', 'company' : 'Bizmorphic Research pvt. ltd.', 'desc' : `During my internship as a software developer(in MERN stack)in a product based startup, I have had a chance to explore multiple roles. I have actively worked as a \n1. Front-end Developer : Developing dynamic, responsive & SEO optimized webpages\n2. Back-end Developer : developing scalable backend to support a large client base\n3. Client manager : Communicating with the client for project reviews and client updates\n4. Tester and Debugger : Testing the website for potential point break test cases. And debugging the code\n5. UI/UX developer : Developing a user friendly Ui for a better client experience\n6. SEO website optimization : Optimizing the website with Meta-data & Server Side Rendering.`, 'link' : ''},
+                                                {'startDate' : 'Feb 1st 2023','endDate' : 'Mar 31st 2023', 'role' : 'Web developer Freelancer', 'company' : 'Freelance', 'desc' : `Worked on NextJs for building a static website for a Homeopathy Clinic in Navi-Mumbai\n1. Responsive website supporting all devices \n2.SEO(Index 1 on google) optamized`, 'link' : ''}
                                             ]);
 
     return (
@@ -24,7 +24,7 @@ export default function ExperienceComponent ({scrollRefEXPERIENCE}) {
                 <meta name="author" content="Shiva Gowtham Kale"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             </Head>
-            <p className={`${styles.title} ${darkMode ? styles.titleDark : ''}`}>Professional Experience</p>
+            <p className={`${styles.title} ${darkMode ? styles.titleDark : ''}`}>Experience</p>
             <div className={`${styles.cont} ${darkMode ? styles.contDark : ''}`}>
                 <div className={styles.leftCont}>
                     {timeline?.map((item) => {

@@ -33,12 +33,6 @@ export default function NavBar({currView, setCurrView, scrollRefME, scrollRefABO
             scrollRefEXPERIENCE.current ?.scrollIntoView({behaviour : 'smooth'});
     },[currView]);
 
-    // const scroller2 = useMemo(() => {
-    //     if(scrollRef && scrollRef.current)
-    //         scrollRef.current.scrollIntoView({behaviour: 'smooth'});
-    //     console.log(scrollRef.current);
-    // },[scrollRef.current])
-
     return (
         <div className={`${styles.wholeCont} ${darkMode ? styles.wholeContDark : ''}`}>
             <Link href='/' className={styles.logoCont}>
@@ -53,23 +47,23 @@ export default function NavBar({currView, setCurrView, scrollRefME, scrollRefABO
             {openMenu && <div className={styles.menuCont}>
                 <div className={`${styles.menuOptions} ${darkMode ? styles.menuOptionsDark : ''}`}
                     onClick={e => setCurrView('ME')} style={{borderBottom:currView === 'ME' ? '1px solid #ffffff' : null}}>
-                    <h1 className={`${styles.menuOptionsText} ${darkMode ? styles.menuOptionsTextDark : ''}`}
-                        style={{color:currView === 'ME' ? '#ffffff' : null}}>ME</h1>
+                    <h2 className={`${styles.menuOptionsText} ${darkMode ? styles.menuOptionsTextDark : ''}`}
+                        style={{color:currView === 'ME' ? '#ffffff' : null}}>ME</h2>
                 </div>
                 <div className={`${styles.menuOptions} ${darkMode ? styles.menuOptionsDark : ''}`}
                     onClick={e => setCurrView('PROJECTS')} style={{borderBottom:currView === 'PROJECTS' ? '1px solid #ffffff' : null}}>
-                    <h1 className={`${styles.menuOptionsText} ${darkMode ? styles.menuOptionsTextDark : ''}`}
-                        style={{color:currView === 'PROJECTS' ? '#ffffff' : null}}>PROJECTS</h1>
+                    <h2 className={`${styles.menuOptionsText} ${darkMode ? styles.menuOptionsTextDark : ''}`}
+                        style={{color:currView === 'PROJECTS' ? '#ffffff' : null}}>PROJECTS</h2>
                 </div>
                 <div className={`${styles.menuOptions} ${darkMode ? styles.menuOptionsDark : ''}`}
                     onClick={e => setCurrView('EXPERIENCE')} style={{borderBottom:currView === 'EXPERIENCE' ? '1px solid #ffffff' : null}}>
-                    <h1 className={`${styles.menuOptionsText} ${darkMode ? styles.menuOptionsTextDark : ''}`}
-                        style={{color:currView === 'EXPERIENCE' ? '#ffffff' : null}}>EXPERIENCE</h1>
+                    <h2 className={`${styles.menuOptionsText} ${darkMode ? styles.menuOptionsTextDark : ''}`}
+                        style={{color:currView === 'EXPERIENCE' ? '#ffffff' : null}}>EXPERIENCE</h2>
                 </div>
                 <div className={`${styles.menuOptions} ${darkMode ? styles.menuOptionsDark : ''}`}
                     onClick={e => setCurrView('ABOUT ME')} style={{borderBottom:currView === 'ABOUT ME' ? '1px solid #ffffff' : null}}>
-                    <h1 className={`${styles.menuOptionsText} ${darkMode ? styles.menuOptionsTextDark : ''}`}
-                        style={{color:currView === 'ABOUT ME' ? '#ffffff' : null}}>ABOUT ME</h1>
+                    <h2 className={`${styles.menuOptionsText} ${darkMode ? styles.menuOptionsTextDark : ''}`}
+                        style={{color:currView === 'ABOUT ME' ? '#ffffff' : null}}>ABOUT ME</h2>
                 </div>
             </div>}
         </div>

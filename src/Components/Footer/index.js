@@ -32,13 +32,13 @@ export default function Footer() {
                 <div className={styles.topRightCont}>
                     <p className={styles.topContText3}> Social</p>
                     <div className={styles.topRightSocialCont}>
-                        <a href='https://shivakale.netlify.app/' className={`${styles.topRightSocialEachCont} ${darkMode ? styles.topRightSocialEachContDark : ''}`} target='_blank'>
+                        <a href='https://www.linkedin.com/in/shivagowthamkale/' className={`${styles.topRightSocialEachCont} ${darkMode ? styles.topRightSocialEachContDark : ''}`} target='_blank'>
                             <img src='/facebookLogo.png' className={styles.topRightSocialEachImg} alt='Facebook logo' />
                         </a>
-                        <a href='https://shivakale.netlify.app/' className={`${styles.topRightSocialEachCont} ${darkMode ? styles.topRightSocialEachContDark : ''}`} target='_blank'>
-                            <img src='/linkedinLogo.png' className={styles.topRightSocialEachImg} alt='Facebook logo' />
+                        <a href='https://www.linkedin.com/in/shivagowthamkale/' className={`${styles.topRightSocialEachCont} ${darkMode ? styles.topRightSocialEachContDark : ''}`} target='_blank'>
+                            <img src='/linkedinLogo.png' className={styles.topRightSocialEachImg} alt='Linkedin logo' />
                         </a>
-                        <a href='https://shivakale.netlify.app/' className={`${styles.topRightSocialEachCont} ${darkMode ? styles.topRightSocialEachContDark : ''}`} target='_blank'>
+                        <a href='https://www.linkedin.com/in/shivagowthamkale/' className={`${styles.topRightSocialEachCont} ${darkMode ? styles.topRightSocialEachContDark : ''}`} target='_blank'>
                             <img src='/twitterLogo.png' className={styles.topRightSocialEachImg} alt='Facebook logo' />
                         </a>
                     </div>

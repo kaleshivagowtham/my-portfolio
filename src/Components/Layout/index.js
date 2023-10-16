@@ -42,9 +42,8 @@ export default function Layout({children}) {
             </Head>
             <NavBar currView={currView} setCurrView={setCurrView} scrollRefME={scrollRefME}
                 scrollRefPROJECTS={scrollRefPROJECTS} scrollRefABOUTME={scrollRefABOUTME} scrollRefEXPERIENCE={scrollRefEXPERIENCE}
-                />
+            />
             <div className={`${styles.darkModeCont} ${darkMode ? styles.darkModeContOn : ''}`} onClick={e => darkModeHandler()}>
-                {/* <img src='/moonIcon.png' className={`${styles.darkModeImg} ${styles.darkModeImgOn}`} /> */}
                 <div className={`${styles.darkModeSun} ${darkMode ? styles.darkModeMoon : ''}`}>
                 </div>
             </div>
