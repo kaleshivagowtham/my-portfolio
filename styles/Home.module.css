@@ -1,16 +1,65 @@
+.mouseDiv {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.35);
+    user-select: none;
+    pointer-events: none;
+    transition: 0.09s !important;
+}
+
+.mouseDivDark {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.mouseDotDiv {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 10000;
+    background-color: rgb(255, 196, 0);
+    user-select: none;
+    pointer-events: none;
+    transition: 0s !important;
+}
+
+.LayoutCont:active .mouseDiv{
+    width: 50px;
+    height: 50px;
+}
+
 .LayoutCont {
+    position: relative;
     width: 100%;
-    min-height: 100vh;
+    height: auto;
+    overflow-y: scroll;
     /* background-color: #2b3346; */
     /* background-color: #363645; */
-    background-color: #ffffff;
+    background-color: #ececec;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    cursor: none;
 }
 .LayoutContDark{
     background-color: #363645;
+}
+
+.LayoutCont::-webkit-scrollbar {
+    width: 0px;
+}
+
+.topScrollBar {
+    position: fixed;
+    /* width: 100%; */
+    height: 2px;
+    top: 0;
+    background-color: rgb(255, 208, 0);
+    z-index: 1000;
 }
 
 .Cont{
@@ -26,7 +75,7 @@
     z-index: 10;
     top: 12.5vh;
     right: 5vh;
-    cursor: pointer;
+    /* cursor: pointer; */
     border: 1px solid white;
     background-color: rgb(255, 255, 255);
     -webkit-box-shadow: inset 0px 0px 30px -10px rgba(0, 0, 0, 0.75);
@@ -70,7 +119,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .contactMeText{

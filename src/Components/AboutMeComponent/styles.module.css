@@ -103,7 +103,7 @@
     padding: 1vh 2vh;
     margin: 1vh;
     background-color: #333333;
-    cursor: pointer;
+    /* cursor: pointer; */
     gap: 2vh;
     display: flex;
     align-items: center;

@@ -10,6 +10,7 @@ export default function NavBar({currView, setCurrView, scrollRefME, scrollRefABO
 
 
     const [openMenu , setOpenMenu] = useState(true);
+    // const [mobileMode, setMobileMode] = useState(false);
 
     const endLineTopStyle = {
         // transform: openMenu ? 'rotate(45deg)' : null,
@@ -51,6 +52,11 @@ export default function NavBar({currView, setCurrView, scrollRefME, scrollRefABO
                         style={{color:currView === 'ME' ? '#ffffff' : null}}>ME</h2>
                 </div>
                 <div className={`${styles.menuOptions} ${darkMode ? styles.menuOptionsDark : ''}`}
+                    onClick={e => setCurrView('ABOUT ME')} style={{borderBottom:currView === 'ABOUT ME' ? '1px solid #ffffff' : null}}>
+                    <h2 className={`${styles.menuOptionsText} ${darkMode ? styles.menuOptionsTextDark : ''}`}
+                        style={{color:currView === 'ABOUT ME' ? '#ffffff' : null}}>ABOUT ME</h2>
+                </div>
+                <div className={`${styles.menuOptions} ${darkMode ? styles.menuOptionsDark : ''}`}
                     onClick={e => setCurrView('PROJECTS')} style={{borderBottom:currView === 'PROJECTS' ? '1px solid #ffffff' : null}}>
                     <h2 className={`${styles.menuOptionsText} ${darkMode ? styles.menuOptionsTextDark : ''}`}
                         style={{color:currView === 'PROJECTS' ? '#ffffff' : null}}>PROJECTS</h2>
@@ -59,11 +65,6 @@ export default function NavBar({currView, setCurrView, scrollRefME, scrollRefABO
                     onClick={e => setCurrView('EXPERIENCE')} style={{borderBottom:currView === 'EXPERIENCE' ? '1px solid #ffffff' : null}}>
                     <h2 className={`${styles.menuOptionsText} ${darkMode ? styles.menuOptionsTextDark : ''}`}
                         style={{color:currView === 'EXPERIENCE' ? '#ffffff' : null}}>EXPERIENCE</h2>
-                </div>
-                <div className={`${styles.menuOptions} ${darkMode ? styles.menuOptionsDark : ''}`}
-                    onClick={e => setCurrView('ABOUT ME')} style={{borderBottom:currView === 'ABOUT ME' ? '1px solid #ffffff' : null}}>
-                    <h2 className={`${styles.menuOptionsText} ${darkMode ? styles.menuOptionsTextDark : ''}`}
-                        style={{color:currView === 'ABOUT ME' ? '#ffffff' : null}}>ABOUT ME</h2>
                 </div>
             </div>}
         </div>

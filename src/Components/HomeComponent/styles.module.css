@@ -31,10 +31,12 @@
     background-size: auto 150%;
     /* background-blend-mode: luminosity; */
     z-index: 0;
+    /* animation: rotateCircle 1s forwards ease-in-out; */
 }
 .topContBackgroundCircleDark{
     background-blend-mode: luminosity;
     background-color: #2b3346;
+    animation: rotateCircle 2s forwards ease-in-out;
 }
 
 .topLeftCont{
@@ -72,8 +74,10 @@
 }
 
 .topText2 {
+    position: absolute;
     width: 100%;
     height: auto;
+    top: 30vh;
     margin: 1.5vh 0;
     font-size: 1rem;
     color: #333333;
@@ -82,6 +86,22 @@
     background-color: rgba(255, 255, 255, 0.5); */
 }
 .topText2Dark{
+    color: #ffffff;
+}
+
+.topText5 {
+    width: 100%;
+    height: auto;
+    top: 30vh;
+    margin: 1.5vh 0;
+    font-size: 1rem;
+    color: #333333;
+    /* backdrop-filter: blur(0px) saturate(169%);
+    -webkit-backdrop-filter: blur(0px) saturate(169%);
+    background-color: rgba(255, 255, 255, 0.5); */
+}
+
+.topText5Dark {
     color: #ffffff;
 }
 
@@ -115,7 +135,7 @@
     font-weight: 500;
     font-size: 1rem;
     color: #fcba0a;
-    cursor: pointer;
+    /* cursor: pointer; */
     user-select: none;
     white-space: nowrap;
 }
@@ -145,7 +165,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    cursor: none;
 }
 .topRightSocialEachContDark{
     background-color: #454557;
@@ -240,6 +260,15 @@
         right: -2.5%;
         margin-bottom: 0;
         opacity: 1;
+    }
+}
+
+@keyframes rotateCircle {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(1080deg);
     }
 }
 

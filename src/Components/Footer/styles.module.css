@@ -76,7 +76,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    cursor: none;
 }
 .topRightSocialEachContDark{
     background-color: #454557;
@@ -126,6 +126,7 @@
     text-decoration: underline 1px solid #fcba0a;
     margin: 0;
     white-space: nowrap;
+    cursor: none;
 }
 
 @media screen and (max-width: 650px) {

@@ -22,7 +22,7 @@
     justify-content: center;
     align-items: center;
     gap: 1vh;
-    cursor: pointer;
+    cursor: none;
 }
 
 .logoImg{
@@ -31,8 +31,9 @@
 }
 
 .logoText{
+    color: #ffffff;
     width: 80%;
-    font-size: 0.85rem;
+    font-size: 1.5rem;
     font-weight: 500;
     user-select: none;
     white-space: nowrap;
@@ -50,7 +51,7 @@
     flex-direction: column;
     align-items: flex-end;
     z-index: 10;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .menuImgEndLine{
@@ -79,7 +80,7 @@
 .menuOptions{
     width: max-content;
     height: auto;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .menuOptionsDark{
 
