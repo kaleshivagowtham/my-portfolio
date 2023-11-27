@@ -1,4 +1,4 @@
-import { useState , useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import styles from '../../../styles/Home.module.css';
 import NavBar from '../NavBar';
 import Footer from '../Footer';
@@ -28,8 +28,90 @@ export default function Layout({children}) {
     const [currView , setCurrView] = useState('ME');
     const [contactMe , setContactMe] = useState(false);
 
+    const [scrollDirection, setScrollDirection] = useState('UP');
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+    const [mousePos, setMousePos] = useState({x:60, y:60});
+
+    const [totalHeight, setTotalHeight] = useState(0);
+    const [scrollUp, setScrollUp] = useState(325);
+
+    useEffect(() => {
+        if(document !== undefined)
+            setTotalHeight(document.getElementById('layoutId').offsetHeight - window.innerHeight )
+    },[])
+
+
+    useEffect(() => {
+        if(document !== undefined)
+            setMousePos({x:document.body.clientX, y: document.body.clientY});
+
+    },[])
+
+    useEffect(() => {
+
+        const scrollHandler = () => {
+            console.log("CALLED")
+            const currScrollPos = window.scrollY;
+            console.log(window.scrollY);
+            if (currScrollPos > prevScrollPos)
+                setScrollDirection('DOWN');
+            else if( currScrollPos < prevScrollPos)
+                setScrollDirection('UP');
+            setPrevScrollPos(currScrollPos);
+            console.log(currScrollPos , " ", prevScrollPos);
+        }
+        
+        document.addEventListener('scroll', scrollHandler);
+        return () => document.removeEventListener('scroll', scrollHandler);
+    },[])
+
+    useEffect(() => {
+        
+        const scrollListener = (e) => {
+            if(window !== undefined)
+                setScrollUp(window.scrollY);
+            console.log("CALLED");
+        }
+
+        document.addEventListener("scroll", scrollListener);
+        return(() => {
+            document.removeEventListener("scroll", scrollListener);
+        })
+
+    },[])
+
+
+    useEffect(() => {
+        // Custom cursor operator
+        const updateMouseLoc = (e) => {
+            setMousePos({ x: e.clientX - 20, y: e.clientY - 20 });
+        };
+
+        document.body.addEventListener('mousemove', updateMouseLoc);
+        return () => { document.body.removeEventListener('mousemove',updateMouseLoc); }
+    },[]);
+
+    const updateMouseLocClick = (e) => {
+        setMousePos({ x: e.clientX - 25, y: e.clientY - 25 });
+    }
+
+    const cursorStyle = {
+        left : mousePos.x ,
+        top : mousePos.y 
+    }
+
+    const cursorDotStyle = {
+        left : mousePos.x + 15,
+        top : mousePos.y + 15
+    }
+
+    const topScrollBarStyle = {
+        width : `${(scrollUp * 100)/totalHeight}%`
+    }
+
     return (
-        <div className={`${styles.LayoutCont} ${darkMode ? styles.LayoutContDark : ''}`} onClick={e => setContactMe(false)}>
+        <div className={`${styles.LayoutCont} ${darkMode ? styles.LayoutContDark : ''}`} id='layoutId' onClick={e => setContactMe(false)}>
             <Head>
                 <title>Shiva Gowtham Kale</title>
                 <link rel="profile image" href="/MyPortfolio.png" />
@@ -40,6 +122,11 @@ export default function Layout({children}) {
                 <meta name="author" content="Shiva Gowtham Kale"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             </Head>
+            <div className={`${styles.topScrollBar}`} style={topScrollBarStyle}></div>
+
+            <div className={`${styles.mouseDiv} ${darkMode ? styles.mouseDivDark : ''}`} style={cursorStyle} onClick={updateMouseLocClick}></div>
+            <div className={`${styles.mouseDotDiv} ${darkMode ? styles.mouseDotDivDark : ''}`} style={cursorDotStyle} onClick={updateMouseLocClick}></div>
+
             <NavBar currView={currView} setCurrView={setCurrView} scrollRefME={scrollRefME}
                 scrollRefPROJECTS={scrollRefPROJECTS} scrollRefABOUTME={scrollRefABOUTME} scrollRefEXPERIENCE={scrollRefEXPERIENCE}
             />

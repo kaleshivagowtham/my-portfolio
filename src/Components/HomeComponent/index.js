@@ -16,11 +16,18 @@ export default function HomeComponent({scrollRefME}) {
     },[])
 
     const nameAdder = useMemo (() => {
-        setTimeout(() => {
-            setName(name + nm[i]);
-            if(i < 18)
-                setI(i+1);
-        },200)
+        if(i < 19){
+            setTimeout(() => {
+                setName(name + nm[i]);
+                    setI(i+1);
+            },200)
+        }
+        else {
+            setTimeout(() => {
+                setName('');
+                setI(0);
+            },5000)
+        }
     },[i]);
 
     return (
@@ -43,7 +50,7 @@ export default function HomeComponent({scrollRefME}) {
                     <p className={`${styles.topText2} ${darkMode ? styles.topText2Dark : ''}`}>I am a BE student passion out in 2024. I have actively participated and organized multiple events under the clubs like Rotaract club and Coders Club in our college. </p>
                 </div>
                 <div className={styles.topRightCont}>
-                    <p className={`${styles.topText2} ${darkMode ? styles.topText2Dark : ''}`}>services</p>
+                    <p className={`${styles.topText5} ${darkMode ? styles.topText5Dark : ''}`}>services</p>
                     <p className={`${styles.topText3} ${darkMode ? styles.topText3Dark : ''}`}>Lets build quality products in programming and design with my services</p>
                     <p className={styles.topText4}>show more →</p>
                     <div className={styles.topRightSocialCont}>
@@ -59,13 +66,13 @@ export default function HomeComponent({scrollRefME}) {
                     </div>
                 </div>
                 <div className={`${styles.topDownCont} ${darkMode ? styles.topDownContDark : ''}`}>
-                    <a href='https://leetcode.com/shivakale/' target='_blank'>
+                    <a href='https://leetcode.com/shivakale/' style={{cursor:"none"}} target='_blank'>
                         <img src='/leetcodeLogo.png' className={styles.topDownContImg} alt='shivakale leetcode profile' />
                     </a>
-                    <a href='https://github.com/kaleshivagowtham/' target='_blank'>
+                    <a href='https://github.com/kaleshivagowtham/' style={{cursor:"none"}} target='_blank'>
                         <img src='/gitHubLogo.png' className={styles.topDownContImg} alt='shivakale leetcode profile' />
                     </a>
-                    <a href='https://www.hackerrank.com/mailongowthu?hr_r=1' target='_blank'>
+                    <a href='https://www.hackerrank.com/mailongowthu?hr_r=1' style={{cursor:"none"}} target='_blank'>
                         <img src='/hackerRankLogo.png' className={styles.topDownContImg} alt='shivakale leetcode profile' />
                     </a>
                 </div>
