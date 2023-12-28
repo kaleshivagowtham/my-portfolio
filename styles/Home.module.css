@@ -8,6 +8,7 @@
     user-select: none;
     pointer-events: none;
     transition: 0.09s !important;
+    scroll-behavior: smooth;
 }
 
 .mouseDivDark {

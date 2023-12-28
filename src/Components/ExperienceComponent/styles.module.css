@@ -5,6 +5,7 @@
     padding: 5vh 0;
     border-radius: 12px;
     background-color: #333333;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -27,8 +28,8 @@
 
 .cont {
     width: 95%;
-    min-height: 70vh;
     margin: 0 2.5%;
+    height: auto;
     padding: 5vh 0;
     border-radius: 12px;
     gap: 5%;
@@ -43,8 +44,8 @@
 }
 
 .leftCont {
-    width: 85%;
-    height: 60vh;
+    max-width: 85%;
+    min-height: 60vh;
     display: block;
     justify-content: flex-start;
     align-items: flex-start;
@@ -61,4 +62,23 @@
     font-size: 1rem;
     color: #ffffff;
     margin: 0;
+}
+
+@media screen and (max-width: 750px) {
+    .leftCont {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .wholeCont {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .wholeCont {
+        width: 100%;
+    }
 }

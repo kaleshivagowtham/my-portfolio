@@ -39,7 +39,7 @@
     background-color: #333333;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 .contDark{
     background-color: #2b3346;
@@ -47,7 +47,7 @@
 
 .leftCont{
     width: 45%;
-    height: 60vh;
+    min-height: 60vh;
     display: block;
     justify-content: flex-start;
     align-items: flex-start;
@@ -129,17 +129,26 @@
 }
 
 @media screen and (max-width: 900px) {
+    .cont {
+        width: 100%;
+        gap: 0.5%;
+        padding: 0 0.5%;
+    }
     .leftCont{
-        width: 30%;
+        width: 50%;
+    }
+    .leftContText2 {
+        font-size: 0.8rem;
     }
     .rightCont{
-        width: 60%;
+        width: 49%;
     }
 }
 
 @media screen and (max-width: 800px) {
     .cont{
         flex-direction: column;
+        align-items: center;
     }
     .title{
         font-size: 1.75rem;
@@ -157,6 +166,14 @@
     }
 
     .rightCont {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .wholeCont {
         width: 100%;
+        margin: 0;
+        padding: 0 2.5%;
     }
 }
