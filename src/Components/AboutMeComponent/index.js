@@ -7,9 +7,9 @@ export default function AboutMeComponent({scrollRefABOUTME , currView}) {
 
     const {darkMode} = useSelector(store => store.darkMode);
 
-    const skills = [[{'name' : "Next.Js",'logo' : '/nextJsLogo.png'},{'name' : "React.Js",'logo' : '/nextJsLogo.png'},{'name' : "NodeJs",'logo' : '/nextJsLogo.png'}, {'name' : "ExpressJs",'logo' : '/nextJsLogo.png'}, {'name' : "Mongoose",'logo' : '/nextJsLogo.png'}, {'name' : "Redux",'logo' : '/nextJsLogo.png'}],
-                    [{'name' : "C++",'logo' : '/nextJsLogo.png'},{'name' : "Python",'logo' : '/nextJsLogo.png'},{'name' : "DSA",'logo' : '/nextJsLogo.png'}],
-                    [{'name' : "MySql",'logo' : '/nextJsLogo.png'},{'name' : "MongoDb",'logo' : '/nextJsLogo.png'}]];
+    const skills = [[{'name' : "Next.Js",'logo' : '/nextJsLogo.png'},{'name' : "React.Js",'logo' : '/reactJsLogo.png'},{'name' : "NodeJs",'logo' : '/nodeJsLogo.png'}, {'name' : "ExpressJs",'logo' : '/expressJsLogo.png'}, {'name' : "Mongoose",'logo' : '/mongoDbLogo.png'}, {'name' : "Redux",'logo' : '/reduxLogo.png'}],
+                    [{'name' : "C++",'logo' : '/cppLogo.png'},{'name' : "Python",'logo' : '/pythonLogo.png'},{'name' : "DSA",'logo' : '/dsaLogo.png'}],
+                    [{'name' : "MySql",'logo' : '/mySqlLogo.png'},{'name' : "MongoDb",'logo' : '/mongoDbLogo.png'}]];
 
     return (
         <div className={`${styles.wholeCont} ${darkMode ? styles.wholeContDark : ''}`} 
@@ -29,7 +29,7 @@ export default function AboutMeComponent({scrollRefABOUTME , currView}) {
                 <div className={styles.leftCont}>
                     <h1 className={styles.leftContText1}> Shiva Gowtham Kale</h1>
                     <p className={styles.leftContText2}> I am a Full Stack web developer, and have hands on experience of working in a web based product startup. In there I have had a chance of working with the technologies mentioned here.
-                        <br />During my internship as a software developer(in MERN stack)in a product based startup, I have had a chance to explore multiple roles. I have actively worked as a <br />
+                        <br />During my internship as a software developer(in MERN stack)in a product based startup, I have had a chance to explore multiple roles. I have actively worked as a <br /><br />
                         1. Front-end Developer : Developing dynamic, responsive & SEO optimized webpages.<br />
                         2. Back-end Developer : developing scalable backend to support a large client base.<br />
                         3. Client manager : Communicating with the client for project reviews and client updates.<br />

@@ -36,7 +36,7 @@
 .topContBackgroundCircleDark{
     background-blend-mode: luminosity;
     background-color: #2b3346;
-    animation: rotateCircle 2s forwards ease-in-out;
+    /* animation: rotateCircle 2s forwards ease-in-out; */
 }
 
 .topLeftCont{
@@ -187,7 +187,7 @@
     width: auto;
 }
 
-.topDownCont{
+.topDownCont {
     position: absolute;
     width: 70%;
     height: 16vh;
@@ -199,6 +199,21 @@
     align-items: center;
     gap: 20%;
 }
+.topDownContOnScroll {
+    animation: slideToLeft 1s forwards ease-in-out;
+}
+/* .topDownCont{
+    position: absolute;
+    width: 70%;
+    height: 16vh;
+    bottom: -4vh;
+    background-color: #333333;
+    box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+} */
 .topDownContDark{
     background-color: #2b3346;
 }
@@ -272,6 +287,24 @@
     }
 }
 
+@keyframes slideToLeft {
+    0% {
+        position: absolute;
+        width: 70%;
+        height: 16vh;
+        bottom: -4vh;
+    }
+    100% {
+        position: fixed;
+        width: 10vh;
+        height: 30vh;
+        left: 0;
+        bottom: 0;
+        transition: left 0 linear;
+        flex-direction: column;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .topContBackgroundCircle{
         height: 55vh;
@@ -304,6 +337,10 @@
         width: 90%;
         height: auto;
         animation: slideInTopLeftCont500px 0.5s forwards ease-in;
+    }
+    .topText2 {
+        position: relative;
+        top: 0;
     }
     .topRightCont{
         position: relative;

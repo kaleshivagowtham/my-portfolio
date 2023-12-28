@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useMemo } from 'react';
 import styles from '../../../styles/Home.module.css';
 import NavBar from '../NavBar';
 import Footer from '../Footer';
@@ -28,50 +28,61 @@ export default function Layout({children}) {
     const [currView , setCurrView] = useState('ME');
     const [contactMe , setContactMe] = useState(false);
 
-    const [scrollDirection, setScrollDirection] = useState('UP');
-    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    // const [scrollDirection, setScrollDirection] = useState('UP');
+    // const [prevScrollPos, setPrevScrollPos] = useState(0);
 
     const [mousePos, setMousePos] = useState({x:60, y:60});
 
     const [totalHeight, setTotalHeight] = useState(0);
-    const [scrollUp, setScrollUp] = useState(325);
+    const [scrollUp, setScrollUp] = useState(0);
+
+    const [viewWidth, setViewWidth] = useState();
 
     useEffect(() => {
-        if(document !== undefined)
             setTotalHeight(document.getElementById('layoutId').offsetHeight - window.innerHeight )
     },[])
 
+    useEffect(() => {
+        setViewWidth(window.innerWidth);
+    },[])
 
     useEffect(() => {
-        if(document !== undefined)
             setMousePos({x:document.body.clientX, y: document.body.clientY});
 
     },[])
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        const scrollHandler = () => {
-            console.log("CALLED")
-            const currScrollPos = window.scrollY;
-            console.log(window.scrollY);
-            if (currScrollPos > prevScrollPos)
-                setScrollDirection('DOWN');
-            else if( currScrollPos < prevScrollPos)
-                setScrollDirection('UP');
-            setPrevScrollPos(currScrollPos);
-            console.log(currScrollPos , " ", prevScrollPos);
-        }
+    //     const scrollHandler = () => {
+    //         const currScrollPos = window.scrollY;
+    //         if (currScrollPos > prevScrollPos){
+    //             setScrollDirection('DOWN');
+    //             setPrevScrollPos(currScrollPos);
+    //         }
+    //         else if( currScrollPos < prevScrollPos){
+    //             setScrollDirection('UP');
+    //             setPrevScrollPos(currScrollPos);
+    //         }
+
+    //         // setPrevScrollPos(currScrollPos);
+
+    //         console.log(currScrollPos , " ", prevScrollPos);
+    //         console.log(scrollDirection);
+    //     }
         
-        document.addEventListener('scroll', scrollHandler);
-        return () => document.removeEventListener('scroll', scrollHandler);
-    },[])
+    //     document.addEventListener("scroll", scrollHandler);
+    //     return () => document.removeEventListener("scroll", scrollHandler);
+    // },[])
+
+    // useEffect(() => {
+    //     setPrevScrollPos(window.screenY);
+    //     console.log(scrollDirection)
+    // },[scrollDirection])
 
     useEffect(() => {
         
         const scrollListener = (e) => {
-            if(window !== undefined)
                 setScrollUp(window.scrollY);
-            console.log("CALLED");
         }
 
         document.addEventListener("scroll", scrollListener);
@@ -136,7 +147,7 @@ export default function Layout({children}) {
             </div>
             <div className={styles.Cont}>
                 {/* <main>{children}</main> */}
-                <HomeComponent scrollRefME={scrollRefME} />
+                <HomeComponent scrollRefME={scrollRefME} scrollUp={scrollUp}/>
                 <AboutMeComponent scrollRefABOUTME={scrollRefABOUTME} />
                 <ProjectsComponent scrollRefPROJECTS={scrollRefPROJECTS}/>
                 <ContactMe contactMe={contactMe} setContactMe={setContactMe}/>

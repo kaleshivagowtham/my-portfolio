@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useEffect, useMemo, useState } from 'react';
 import { useSelector } from 'react-redux';
 
-export default function HomeComponent({scrollRefME}) {
+export default function HomeComponent({scrollRefME, scrollUp}) {
 
     const {darkMode} = useSelector(store => store.darkMode);
 
@@ -65,7 +65,8 @@ export default function HomeComponent({scrollRefME}) {
                         </a>
                     </div>
                 </div>
-                <div className={`${styles.topDownCont} ${darkMode ? styles.topDownContDark : ''}`}>
+                <div className={`${styles.topDownCont} ${darkMode ? styles.topDownContDark : ''} `}>
+                    {/* ${scrollUp > 0 ? styles.topDownContOnScroll : ''} */}
                     <a href='https://leetcode.com/shivakale/' style={{cursor:"none"}} target='_blank'>
                         <img src='/leetcodeLogo.png' className={styles.topDownContImg} alt='shivakale leetcode profile' />
                     </a>

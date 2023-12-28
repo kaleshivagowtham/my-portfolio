@@ -2,6 +2,7 @@
     position: relative;
     width: 100%;
     height: 25vh;
+    color: #ffffff;
     display: flex;
     overflow-y: hidden;
 }
@@ -12,7 +13,7 @@
 .dateCont{
     position: relative;
     width: 15%;
-    height: 25vh;
+    max-height: 100%;
     border-right: 3.5px solid #fcba0a;
     display: flex;
     flex-direction: column;
@@ -25,7 +26,6 @@
 }
 .jobCont {
     width: 85%;
-    height: 15vh;
     padding: 2vh 4vh;
     overflow-y: hidden;
 }
@@ -108,13 +108,77 @@
 
 @keyframes expand {
     from {
-        min-height: 15vh;
+        max-height: 25vh;
     }
     to {
-        min-height: 35vh;
+        max-height: 100vh;
     }
 }
 
-@media screen and (max-width: 700px) {
-    
+@media screen and (max-width: 850px) {
+    .date {
+        font-size: 0.8rem;
+    }
+    .jobCont {
+        margin-left: 1.5vh;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .desc {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .desc {
+        font-size: 0.75rem;
+    }
+    .jobCont {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .wholeCont{
+        flex-direction: column;
+    }
+    .date {
+        font-size: 0.75rem;
+        margin: 0;
+    }
+    .line {
+        width: 8px;
+        height: 1px;
+        color: #ffffff;
+    }
+    .dateCont {
+        width: max-content;
+        height: 1.5rem;
+        gap: 1vh;
+        padding-left: 1vh;
+        margin-left: 7.5%;
+        flex-direction: row;
+        border-left: 3.5px solid #fcba0a;
+        border-right: 0;
+        justify-content: flex-start;
+    }
+    .datePoint {
+        display: none;
+    }
+    .jobCont {
+        width: 100%;
+        padding-right: 4vh;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .dateCont {
+        margin-left: 2.5%;
+    }
+    .jobCont {
+        width: 100%;
+        padding: 2vh 1vh;
+        padding-right: 5vh;
+    }
 }

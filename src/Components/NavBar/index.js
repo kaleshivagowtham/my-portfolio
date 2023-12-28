@@ -10,7 +10,11 @@ export default function NavBar({currView, setCurrView, scrollRefME, scrollRefABO
 
 
     const [openMenu , setOpenMenu] = useState(true);
-    // const [mobileMode, setMobileMode] = useState(false);
+
+    useEffect(() => {
+        if(window.innerWidth <= 500)
+            setOpenMenu(false);
+    },[])
 
     const endLineTopStyle = {
         // transform: openMenu ? 'rotate(45deg)' : null,
@@ -25,13 +29,13 @@ export default function NavBar({currView, setCurrView, scrollRefME, scrollRefABO
 
     const scroller = useMemo(() => {
         if(currView === 'ABOUT ME')
-            scrollRefABOUTME.current?.scrollIntoView({behaviour : 'smooth'});
+            scrollRefABOUTME.current?.scrollIntoView({behavior : 'smooth'});
         if(currView === 'ME')
-            scrollRefME.current?.scrollIntoView({behaviour : 'smooth'});
+            scrollRefME.current?.scrollIntoView({behavior : 'smooth'});
         if(currView === 'PROJECTS')
-            scrollRefPROJECTS.current?.scrollIntoView({behaviour : 'smooth'});
+            scrollRefPROJECTS.current?.scrollIntoView({behavior : 'smooth'});
         if( currView === 'EXPERIENCE')
-            scrollRefEXPERIENCE.current ?.scrollIntoView({behaviour : 'smooth'});
+            scrollRefEXPERIENCE.current ?.scrollIntoView({behavior : 'smooth'});
     },[currView]);
 
     return (
