@@ -4,7 +4,7 @@
     margin: 0 2.5%;
     padding: 5vh 0;
     border-radius: 12px;
-    background-color: #333333;
+    background-color: var(--background-primary-color);
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@
 }
 
 .wholeContDark {
-    background-color: #2b3346;
+    background-color: var(--darkmode-background-primary-color);
 }
 
 .title {
@@ -33,14 +33,14 @@
     padding: 5vh 0;
     border-radius: 12px;
     gap: 5%;
-    background-color: #333333;
+    background-color: var(--background-primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .contDark {
-    background-color: #2b3346;
+    background-color: var(--darkmode-background-primary-color);
 }
 
 .leftCont {

@@ -4,14 +4,15 @@
     margin: 0 2.5%;
     padding: 5vh 0;
     border-radius: 12px;
-    background-color: #333333;
+    background-color: var(--background-primary-color);
+    font-family: var(--primary-font-family-open-sans);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
 .wholeContDark{
-    background-color: #2b3346;
+    background-color: var(--darkmode-background-primary-color);
 }
 
 .title{
@@ -20,13 +21,14 @@
     padding: 1.5vh 15vh;
     border-radius: 12px;
     /* background-color: #393644; */
+    font-family: var(--primary-font-family-open-sans);
     text-align: center;
     font-size: 2rem;
     font-weight: 500;
     white-space: nowrap;
 }
 .titleDark{
-    background-color: #393644;
+    background-color: var(--darkmode-background-primary-color);
 }
 
 .cont{
@@ -36,13 +38,13 @@
     padding: 5vh 0;
     border-radius: 12px;
     gap: 5%;
-    background-color: #333333;
+    background-color: var(--background-primary-color);
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 .contDark{
-    background-color: #2b3346;
+    background-color: var(--darkmode-background-primary-color);
 }
 
 .leftCont{
@@ -57,12 +59,14 @@
     width: max-content;
     font-size: 1.25rem;
     color: #ffffff;
+    font-family: var(--primary-font-family-open-sans);
     margin: 2vh 0 4vh 0;
 }
 
 .leftContText2 {
     font-size: 1rem;
     color: #ffffff;
+    font-family: var(--primary-font-family-open-sans);
     margin: 0;
 }
 
@@ -78,7 +82,7 @@
     justify-content: flex-start;
 }
 .rightContDark{
-    background-color: #393644;
+    background-color: var(--darkmode-background-primary-color);;
 }
 
 .rightBottomCont{
@@ -102,7 +106,7 @@
     border-radius: 5px;
     padding: 1vh 2vh;
     margin: 1vh;
-    background-color: #333333;
+    background-color: var(--background-primary-color);
     /* cursor: pointer; */
     gap: 2vh;
     display: flex;
@@ -110,15 +114,16 @@
     justify-content: space-evenly;
 }
 .eachSkillDark{
-    background-color: #2b3346;
+    background-color: var(--darkmode-background-primary-color);
 }
 
 .eachSkillName{
     width: max-content;
     height: auto;
     margin: 0;
+    font-family: var(--primary-font-family-open-sans);
     font-size: 1rem;
-    color: #fcba0a;
+    color: var(--highlight-font-color);
 }
 
 .eachSkillImg{

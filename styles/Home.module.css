@@ -21,7 +21,7 @@
     height: 10px;
     border-radius: 50%;
     z-index: 10000;
-    background-color: rgb(255, 196, 0);
+    background-color: var(--highlight-font-color);
     user-select: none;
     pointer-events: none;
     transition: 0s !important;
@@ -37,9 +37,7 @@
     width: 100%;
     height: auto;
     overflow-y: scroll;
-    /* background-color: #2b3346; */
-    /* background-color: #363645; */
-    background-color: #ececec;
+    background-color: var(--background-secondary-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,7 +45,7 @@
     cursor: none;
 }
 .LayoutContDark{
-    background-color: #363645;
+    background-color: var(--darkmode-background-secondary-color);
 }
 
 .LayoutCont::-webkit-scrollbar {
@@ -56,10 +54,9 @@
 
 .topScrollBar {
     position: fixed;
-    /* width: 100%; */
     height: 2px;
     top: 0;
-    background-color: rgb(255, 208, 0);
+    background-color: var(--highlight-font-color);
     z-index: 1000;
 }
 
@@ -104,7 +101,7 @@
     animation: darkModeOff 0.75s forwards ease-in-out;
 }
 .darkModeMoon{
-    background-color: #2b3346;
+    background-color: var(--darkmode-background-secondary-color);
     animation: darkModeOn 0.75s forwards ease-in-out;
 }
 
@@ -130,7 +127,7 @@
 
 @keyframes darkModeOn {
     0%{
-        background-color: #ffc400;
+        background-color: var(--highlight-font-color);
         left: 0;
     }
     99%{
@@ -147,7 +144,7 @@
         right: 0;
     }
     100% {
-        background-color: #ffc400;
+        background-color: var(--highlight-font-color);
         right: calc(3vh - 2px);
     }
 }

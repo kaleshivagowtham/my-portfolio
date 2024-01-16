@@ -40,7 +40,7 @@ export default function ContactMe({setContactMe , contactMe}) {
                     <h1 className = {styles.chatBoxTitle}>Contact Me</h1>
                 }
             </div>
-            <div className = {`${styles.chatCont} ${darkMode ? styles.wholeContDark : ''} ${!contactMe ? styles.chatContClose : ''}`}>
+            <div className = {`${styles.chatCont} ${darkMode ? styles.chatContDark : ''} ${!contactMe ? styles.chatContClose : ''}`}>
                 <label className = {styles.mailInputCont} onClick={e => {e.stopPropagation(),setSelRef('mailInput')}}>
                     <h1 name='mailInput' 
                         className={`${styles.mailInputTitle} ${selRef === 'mailInput' || msgContents.mail !== '' ? `${darkMode ? styles.mailInputTitleDarkOnClick : styles.mailInputTitleOnClick}` : '' } 

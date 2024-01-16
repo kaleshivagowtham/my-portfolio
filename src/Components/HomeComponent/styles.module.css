@@ -2,6 +2,7 @@
     width: 100%;
     padding-top: 10vh;
     min-height: 90vh;
+    font-family: var(--primary-font-family-open-sans);
     display: flex;
     flex-direction: column;
 }
@@ -21,7 +22,7 @@
     aspect-ratio: 1/1;
     /* border: 1px solid white; */
     border-radius: 50%;
-    /* background-color: #333333; */
+    /* background-color: var(--background-primary-color); */
     background-color: #c26d6d;
     background-image: url('../../../public/background-img1.png');
     filter: grayscale(0%);
@@ -35,7 +36,7 @@
 }
 .topContBackgroundCircleDark{
     background-blend-mode: luminosity;
-    background-color: #2b3346;
+    background-color: var(--darkmode-background-primary-color);
     /* animation: rotateCircle 2s forwards ease-in-out; */
 }
 
@@ -52,7 +53,7 @@
     margin: 0;
     font-weight: 200;
     font-size: 3.5rem;
-    color: #333333;
+    color: var(--background-primary-color);
     user-select: none;
 }
 .topText1Dark{
@@ -62,12 +63,12 @@
 .topName{
     width: 50%;
     font-size: 2.5rem;
-    color: #333333;
+    color: var(--background-primary-color);
     margin: 0;
     white-space: nowrap;
     font-weight: 700;
     white-space: pre;
-    border-bottom: 3px solid #fcba0a;
+    border-bottom: 3px solid var(--highlight-font-color);
 }
 .topNameDark{
     color: #ffffff;
@@ -80,7 +81,7 @@
     top: 30vh;
     margin: 1.5vh 0;
     font-size: 1rem;
-    color: #333333;
+    color: var(--background-primary-color);
     /* backdrop-filter: blur(0px) saturate(169%);
     -webkit-backdrop-filter: blur(0px) saturate(169%);
     background-color: rgba(255, 255, 255, 0.5); */
@@ -95,7 +96,7 @@
     top: 30vh;
     margin: 1.5vh 0;
     font-size: 1rem;
-    color: #333333;
+    color: var(--background-primary-color);
     /* backdrop-filter: blur(0px) saturate(169%);
     -webkit-backdrop-filter: blur(0px) saturate(169%);
     background-color: rgba(255, 255, 255, 0.5); */
@@ -118,7 +119,7 @@
     height: auto;
     margin: 1.75vh 0;
     font-size: 1.25rem;
-    color: #333333;
+    color: var(--background-primary-color);
     /* backdrop-filter: blur(0px) saturate(169%);
     -webkit-backdrop-filter: blur(0px) saturate(169%);
     background-color: rgba(255, 255, 255, 0.5);
@@ -134,13 +135,13 @@
     margin: 1.75vh 0;
     font-weight: 500;
     font-size: 1rem;
-    color: #fcba0a;
+    color: var(--highlight-font-color);
     /* cursor: pointer; */
     user-select: none;
     white-space: nowrap;
 }
 .topText4:hover{
-    text-decoration: underline solid 1px #fcba0a;
+    text-decoration: underline solid 1px var(--highlight-font-color);
 }
 .topText4:active{
     opacity: 0.5;
@@ -168,7 +169,10 @@
     cursor: none;
 }
 .topRightSocialEachContDark{
-    background-color: #454557;
+    background-color: transparent;
+    box-shadow: var(--darkmode-box-shadow);
+    -webkit-box-shadow: var(--darkmode-box-shadow);
+    -moz-box-shadow: var(--darkmode-box-shadow);
 }
 .topRightSocialEachCont:hover{
     box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.10);
@@ -192,7 +196,7 @@
     width: 70%;
     height: 16vh;
     bottom: -4vh;
-    background-color: #333333;
+    background-color: var(--background-primary-color);
     box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
@@ -207,7 +211,7 @@
     width: 70%;
     height: 16vh;
     bottom: -4vh;
-    background-color: #333333;
+    background-color: var(--background-primary-color);
     box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
@@ -215,7 +219,7 @@
     gap: 20%;
 } */
 .topDownContDark{
-    background-color: #2b3346;
+    background-color: var(--darkmode-background-primary-color);
 }
 
 .topDownContImg{

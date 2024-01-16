@@ -1,18 +1,22 @@
 .wholeCont{
     position: fixed;
-    background-color: #ffffff;
+    background-color: #050404;
     bottom: 5vh;
     right: 5vh;
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     animation: chatBoxOpen 1s forwards ease-in-out;
     z-index: 10;
+    font-family: var(--primary-font-family-open-sans);
 }
 .wholeContClose{
     animation: chatBoxClose 1s forwards ease-in-out;
 }
 .wholeContDark{
-    background-color: #747474;
+    background-color: var(--darkmode-background-secondary-color);
+    box-shadow: var(--darkmode-box-shadow);
+    -webkit-box-shadow: var(--darkmode-box-shadow);
+    -moz-box-shadow: var(--darkmode-box-shadow);
 }
 
 .x{
@@ -35,7 +39,7 @@
 .titleCont{
     min-width: max-content;
     height: 6vh;
-    background-color: #363645;
+    background-color: var(--darkmode-background-primary-color);
     border-radius: 12px 12px 0 0;
     display: flex;
     justify-content: center;
@@ -61,6 +65,9 @@
     width: 100%;
     height: 0;
     display: none;
+}
+.chatContDark {
+    background-color: var(--darkmode-background-secondary-color);
 }
 
 .mailInputCont{
@@ -100,17 +107,17 @@
     text-indent: 1vh;
     margin: 0 2.5%;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.09);
+    background-color: rgba(121, 121, 121, 0.09);
     overflow-y: auto;
-    color: #363645;
+    color: var(--highlight-font-color);
 }
 .mailInputOnClick{
     background-color: transparent;
-    border: 2px solid #363645;
+    border: 2px solid var(--background-primary-color);
 }
 .mailInputDarkOnCLick{
     background-color: transparent;
-    border: 2px solid #ffffff;
+    border: 2px solid rgba(39, 110, 112, 1);
     color: #ffffff;
 }
 
@@ -141,11 +148,11 @@
     height: 5vh;
     bottom: 1vh;
     left:5vh;
-    background-color: #363645;
+    background-color: var(--darkmode-background-primary-color);;
     border: none;
     outline: none;
     border-radius: 25px;
-    /* cursor: pointer; */
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,7 +171,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #2b3346;
+    background-color: var(--background-primary-color);;
     visibility: hidden;
 }
 
@@ -174,7 +181,7 @@
     height: 5vh;
     bottom: 1vh;
     right:3vh;
-    background-color: #363645;
+    background-color: var(--darkmode-background-primary-color);
     border: none;
     outline: none;
     border-radius: 25px;
@@ -203,7 +210,7 @@
     background-color: #ffffff;
 }
 .docsUploadedContDark {
-    background-color: #747474;
+    background-color: var(--background-primary-color);
 }
 
 .docContTitle {
@@ -342,7 +349,7 @@
     100% {
         top: 1vh;
         font-size: 0.75rem;
-        background-color: #747474;
+        background-color: var(--darkmode-background-secondary-color);
         padding: 0 0.5vh;
     }
 }
