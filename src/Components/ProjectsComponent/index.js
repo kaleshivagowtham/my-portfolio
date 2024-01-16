@@ -5,9 +5,9 @@ import Head from 'next/head';
 export default function ProjectsComponent({scrollRefPROJECTS}) {
 
     const {darkMode} = useSelector(store => store.darkMode);
-    const projects =[{'title' : 'My Portfolio','link' : 'https://shivakale.netlify.app/','img':'MyPortfolio.png', 'desc' : 'As a developer and a freelancer I have acquired multiple skills, and created multiple projects. And this is where you can find all of my professional experience I have as a web developer.'},
-                    {'title' : 'Divine Classical Homeopathy','link' : 'https://divineclassicalhomoeopathy.com/','img':'divineClassicalHomeopathy.png', 'desc' : 'It is a website I have built as a freelance web developer, for a homeopathy clinic. This website is highly optimized in terms of SEO.'},
-                    {'title' : 'Storry Teller','link' : 'https://storryteller.netlify.app/','img':'StorryTellerImg.png', 'desc' : 'It a still undergoing website, which I believe will change our perspective to the series or anime that we watch just for fun. It is like an open-source version of novel writing, where you can contribute and accept contributions from others.'}];
+    const projects =[{'title' : 'My Portfolio','link' : 'https://shivakale.netlify.app/','img':'MyPortfolio.png', 'desc' : 'This is all of the professional experience I have as a web developer.'},
+                    {'title' : 'Divine Classical Homeopathy','link' : 'https://divineclassicalhomoeopathy.com/','img':'divineClassicalHomeopathy.png', 'desc' : 'It is a website I have built as a freelance web developer, for a homeopathy clinic.'},
+                    {'title' : 'Storry Teller','link' : 'https://storryteller.netlify.app/','img':'StorryTellerImg.png', 'desc' : "It's an open-source version of writing, where you can contribute and accept contributions."}];
 
     return (
         <div className={styles.wholeCont} ref={scrollRefPROJECTS}>

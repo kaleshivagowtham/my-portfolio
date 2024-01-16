@@ -150,8 +150,8 @@
 }
 
 @media screen and (max-width: 500px){
-    .darkModeCont{
+    /* .darkModeCont{
         top: 2.5vh;
         right: 12.5vh;
-    }
+    } */
 }
