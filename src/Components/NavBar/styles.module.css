@@ -5,6 +5,7 @@
     height: 10vh;
     background-color: var(--background-primary-color);
     /* background-color: #2b3346; */
+    font-family: var(--primary-font-family-open-sans);
     display: flex;
     justify-content: flex-start;
     align-items: center;

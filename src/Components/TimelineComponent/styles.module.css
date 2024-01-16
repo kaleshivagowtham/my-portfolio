@@ -3,6 +3,7 @@
     width: 100%;
     height: 25vh;
     color: #ffffff;
+    font-family: var(--primary-font-family-open-sans);
     display: flex;
     overflow-y: hidden;
 }

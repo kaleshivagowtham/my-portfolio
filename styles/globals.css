@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 
 :root {
   --background-primary-color: #333333;
@@ -8,7 +9,7 @@
   --darkmode-primary-font-color: #ffffff;
   --highlight-font-color: rgb(255, 208, 0);
   --darkmode-highlight-font-color: rgba(39, 110, 112, 1);
-  --primary-font-family: 'Open Sans', sans-serif;
+  --primary-font-family-open-sans: 'Open Sans',sans-serif;
   --darkmode-box-shadow: 15px 15px 17px -1px rgba(39, 110, 112, 1);
   --darkmode-hover-box-shadow: 15px 15px 17px -1px rgba(39, 110, 112, 1);
 }
