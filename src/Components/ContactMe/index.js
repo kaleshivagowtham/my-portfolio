@@ -32,7 +32,7 @@ export default function ContactMe({setContactMe , contactMe}) {
         <div className = {`${styles.wholeCont} ${darkMode ? styles.wholeContDark : ''} ${!contactMe ? styles.wholeContClose : ''}`}
             onClick={e => {e.stopPropagation();setSelRef(null)}}>
             {contactMe && <p className = {styles.x} onClick = {e => setContactMe(false)}>X</p>}
-            <div className = {styles.titleCont} onClick={e => {e.stopPropagation();setContactMe(!contactMe)}}>
+            <div className = {`${styles.titleCont} ${darkMode ? styles.titleContDark : ''}`} onClick={e => {e.stopPropagation();setContactMe(!contactMe)}}>
                 {contactMe
                   ?
                     <h1 className = {`${styles.chatBoxTitle} ${!contactMe ? styles.chatBoxTitleClose : ''}`}>Shiva Gowtham Kale</h1>
@@ -41,13 +41,13 @@ export default function ContactMe({setContactMe , contactMe}) {
                 }
             </div>
             <div className = {`${styles.chatCont} ${darkMode ? styles.chatContDark : ''} ${!contactMe ? styles.chatContClose : ''}`}>
-                <label className = {styles.mailInputCont} onClick={e => {e.stopPropagation(),setSelRef('mailInput')}}>
+                <label className = {`${styles.mailInputCont}`} onClick={e => {e.stopPropagation(),setSelRef('mailInput')}}>
                     <h1 name='mailInput' 
                         className={`${styles.mailInputTitle} ${selRef === 'mailInput' || msgContents.mail !== '' ? `${darkMode ? styles.mailInputTitleDarkOnClick : styles.mailInputTitleOnClick}` : '' } 
                             ${darkMode ? styles.mailInputTitleDark : ''}`}>
                         Your Gmail
                     </h1>
-                    <input className={`${styles.mailInput} ${selRef === 'mailInput' ? `${darkMode ? styles.mailInputDarkOnCLick : styles.mailInputOnClick}` : '' }` }
+                    <input className={`${styles.mailInput} ${selRef === 'mailInput' ? `${darkMode ? styles.mailInputDarkOnCLick : styles.mailInputOnClick}` : '' }  ${darkMode ? styles.mailInputDark : ''}` }
                         name='mail' onChange={e => changeHandler(e)}
                     />
                 </label>
@@ -57,7 +57,7 @@ export default function ContactMe({setContactMe , contactMe}) {
                             ${darkMode ? styles.mailInputTitleDark : ''}`}>
                         Message
                     </h1>
-                    <textarea name='msg' className={`${styles.mailInput} ${selRef === 'messageInput' ? `${darkMode ? styles.mailInputDarkOnCLick : styles.mailInputOnClick}`:''}`}
+                    <textarea name='msg' className={`${styles.mailInput} ${selRef === 'messageInput' ? `${darkMode ? styles.mailInputDarkOnCLick : styles.mailInputOnClick}`:''} ${darkMode ? styles.mailInputDark : ''}`}
                         style={{height:'55vh',maxHeight:'35vh' , maxWidth:'95%', minWidth:'95%', minHeight:'35vh',fontSize:'1rem',padding:'1vh'}}
                         onChange={e => changeHandler(e)}
                     />

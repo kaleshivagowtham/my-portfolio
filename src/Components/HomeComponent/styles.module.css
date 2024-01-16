@@ -309,10 +309,11 @@
     }
 }
 
+
 @media screen and (max-width: 800px) {
     .topContBackgroundCircle{
         height: 55vh;
-        /* background-blend-mode: darken; */
+        background-blend-mode: soft-light;
     }
     .topLeftCont{
         width: 40%;
@@ -332,6 +333,7 @@
     }
     .topContBackgroundCircle {
         position: relative;
+        background-blend-mode: unset;
         width: 90%;
         height: auto;
         background-size: auto 100%;
@@ -360,5 +362,8 @@
     .topDownContImg{
         height: 6vh;
         width: auto;
+    }
+    .topText3 {
+        font-size: 1rem;
     }
 }

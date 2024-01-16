@@ -126,23 +126,10 @@
 }
 
 @media screen and (max-width: 650px) {
-    .desc {
-        font-size: 0.8rem;
-    }
-}
-
-@media screen and (max-width: 550px) {
-    .desc {
-        font-size: 0.75rem;
-    }
-    .jobCont {
-        padding-right: 0;
-    }
-}
-
-@media screen and (max-width: 450px) {
     .wholeCont{
         flex-direction: column;
+        overflow: hidden;
+        margin-bottom: 2vh;
     }
     .date {
         font-size: 0.75rem;
@@ -170,6 +157,19 @@
     .jobCont {
         width: 100%;
         padding-right: 4vh;
+    }
+    .desc {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .desc {
+        font-size: 0.75rem;
+    }
+
+    .jobCont {
+        padding-right: 0;
     }
 }
 

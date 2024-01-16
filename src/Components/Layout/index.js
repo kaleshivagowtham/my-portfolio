@@ -82,7 +82,7 @@ export default function Layout({children}) {
     useEffect(() => {
         
         const scrollListener = (e) => {
-                setScrollUp(window.scrollY);
+            setScrollUp(window.scrollY);
         }
 
         document.addEventListener("scroll", scrollListener);
@@ -138,8 +138,8 @@ export default function Layout({children}) {
             <div className={`${styles.mouseDiv} ${darkMode ? styles.mouseDivDark : ''}`} style={cursorStyle} onClick={updateMouseLocClick}></div>
             <div className={`${styles.mouseDotDiv} ${darkMode ? styles.mouseDotDivDark : ''}`} style={cursorDotStyle} onClick={updateMouseLocClick}></div>
 
-            <NavBar currView={currView} setCurrView={setCurrView} scrollRefME={scrollRefME}
-                scrollRefPROJECTS={scrollRefPROJECTS} scrollRefABOUTME={scrollRefABOUTME} scrollRefEXPERIENCE={scrollRefEXPERIENCE}
+            <NavBar currView={currView} setCurrView={setCurrView} scrollUp={scrollUp}
+                scrollRefME={scrollRefME} scrollRefPROJECTS={scrollRefPROJECTS} scrollRefABOUTME={scrollRefABOUTME} scrollRefEXPERIENCE={scrollRefEXPERIENCE}
             />
             <div className={`${styles.darkModeCont} ${darkMode ? styles.darkModeContOn : ''}`} onClick={e => darkModeHandler()}>
                 <div className={`${styles.darkModeSun} ${darkMode ? styles.darkModeMoon : ''}`}>

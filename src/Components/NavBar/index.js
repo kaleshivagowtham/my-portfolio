@@ -3,7 +3,7 @@ import styles from './styles.module.css';
 import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
 
-export default function NavBar({currView, setCurrView, scrollRefME, scrollRefABOUTME, scrollRefPROJECTS, scrollRefEXPERIENCE }) {
+export default function NavBar({scrollUp,currView, setCurrView, scrollRefME, scrollRefABOUTME, scrollRefPROJECTS, scrollRefEXPERIENCE }) {
 
     const dispatch = useDispatch();
     const {darkMode} = useSelector(store => store.darkMode);
@@ -39,7 +39,7 @@ export default function NavBar({currView, setCurrView, scrollRefME, scrollRefABO
     },[currView]);
 
     return (
-        <div className={`${styles.wholeCont} ${darkMode ? styles.wholeContDark : ''}`}>
+        <div className={`${styles.wholeCont} ${darkMode ? styles.wholeContDark : ''} ${scrollUp ? (darkMode ? styles.wholeContDarkOnScroll : '') : ''} `}>
             <Link href='/' className={styles.logoCont}>
                 <img className={styles.logoImg} src='/EWHW_final_logo_white.png' alt='logo'/>
                 <h1 className={styles.logoText}>Shiva Gowtham Kale</h1>
