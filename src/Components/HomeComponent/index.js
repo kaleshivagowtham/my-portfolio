@@ -20,7 +20,7 @@ export default function HomeComponent({scrollRefME, scrollUp}) {
             setTimeout(() => {
                 setName(name + nm[i]);
                     setI(i+1);
-            },200)
+            },150)
         }
         else {
             setTimeout(() => {

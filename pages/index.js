@@ -4,12 +4,12 @@ import HomeComponent from '../src/Components/HomeComponent'
 export default function Home() {
 
   return (
-    <div>
-      <Head>
-        <title>Shiva Gowtham Kale</title>
-        <link rel="icon" href="/myImg.jpg" />
-      </Head>
-      <HomeComponent />
-    </div>
+      <div>
+        <Head>
+          <title>Shiva Gowtham Kale</title>
+          <link rel="icon" href="/myImg.jpg" />
+        </Head>
+        <HomeComponent />
+      </div>
   )
 }

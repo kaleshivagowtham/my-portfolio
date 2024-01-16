@@ -14,7 +14,7 @@
     position: relative;
     width: 15%;
     max-height: 100%;
-    border-right: 3.5px solid #fcba0a;
+    border-right: 3.5px solid var(--highlight-font-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -52,12 +52,12 @@
     top: 40%;
     right: -10px;
     border-radius: 50%;
-    border: 3px solid #fcba0a;
-    background-color: #fcba0a;
+    border: 3px solid var(--highlight-font-color);
+    background-color: var(--highlight-font-color);
     /* cursor: pointer; */
 }
 .datePoint:hover {
-    background-color: #333333;
+    background-color: var(--background-primary-color);
     width: 3.5vh;
     height: 3.5vh;
     /* left: 13.8%; */
@@ -68,14 +68,14 @@
     font-size: 1.5rem;
     font-weight: 400;
     margin: 0;
-    color: #fcba0a;
+    color: var(--highlight-font-color);
 }
 
 .company {
     font-size: 1rem;
     font-weight: 400;
     margin: 0;
-    color: #fcba0a;
+    color: var(--highlight-font-color);
 }
 
 .desc {
@@ -91,7 +91,7 @@
     margin: 0;
     padding: 1vh 3vh;
     background-color: #ffffff;
-    color: #333333;
+    color: var(--background-primary-color);
     font-weight: 500;
     font-size: 1rem;
     border-radius: 25px;
@@ -159,7 +159,7 @@
         padding-left: 1vh;
         margin-left: 7.5%;
         flex-direction: row;
-        border-left: 3.5px solid #fcba0a;
+        border-left: 3.5px solid var(--highlight-font-color);
         border-right: 0;
         justify-content: flex-start;
     }

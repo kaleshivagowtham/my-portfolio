@@ -9,7 +9,7 @@
 }
 
 .title{
-    color: #333333;
+    color: var(--background-primary-color);
     font-size: 2rem;
 }
 .titleDark{
@@ -54,7 +54,7 @@
 
 .eachProjectTitle{
     font-size: 1.25rem;
-    color: #333333;
+    color: var(--background-primary-color);
     white-space: nowrap;
 }
 .eachProjectTitleDark{
