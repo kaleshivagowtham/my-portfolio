@@ -28,13 +28,13 @@ export default function NavBar({scrollUp,currView, setCurrView, scrollRefME, scr
     }
 
     const scroller = useMemo(() => {
-        if(currView === 'ABOUT ME')
+        if(currView === scrollRefABOUTME)
             scrollRefABOUTME.current?.scrollIntoView({behavior : 'smooth'});
-        if(currView === 'ME')
+        if(currView === scrollRefME)
             scrollRefME.current?.scrollIntoView({behavior : 'smooth'});
-        if(currView === 'PROJECTS')
+        if(currView === scrollRefPROJECTS)
             scrollRefPROJECTS.current?.scrollIntoView({behavior : 'smooth'});
-        if( currView === 'EXPERIENCE')
+        if( currView === scrollRefEXPERIENCE)
             scrollRefEXPERIENCE.current ?.scrollIntoView({behavior : 'smooth'});
     },[currView]);
 
@@ -51,24 +51,24 @@ export default function NavBar({scrollUp,currView, setCurrView, scrollRefME, scr
             </div>
             {openMenu && <div className={styles.menuCont}>
                 <div className={`${styles.menuOptions} ${darkMode ? styles.menuOptionsDark : ''}`}
-                    onClick={e => setCurrView('ME')} style={{borderBottom:currView === 'ME' ? '1px solid #ffffff' : null}}>
+                    onClick={e => setCurrView(scrollRefME)} style={{borderBottom:currView === scrollRefME.current ? '1px solid #ffffff' : null}}>
                     <h2 className={`${styles.menuOptionsText} ${darkMode ? styles.menuOptionsTextDark : ''}`}
-                        style={{color:currView === 'ME' ? '#ffffff' : null}}>ME</h2>
+                        style={{color:currView === scrollRefME ? '#ffffff' : null}}>ME</h2>
                 </div>
                 <div className={`${styles.menuOptions} ${darkMode ? styles.menuOptionsDark : ''}`}
-                    onClick={e => setCurrView('ABOUT ME')} style={{borderBottom:currView === 'ABOUT ME' ? '1px solid #ffffff' : null}}>
+                    onClick={e => setCurrView(scrollRefABOUTME)} style={{borderBottom:currView === scrollRefABOUTME.current ? '1px solid #ffffff' : null}}>
                     <h2 className={`${styles.menuOptionsText} ${darkMode ? styles.menuOptionsTextDark : ''}`}
-                        style={{color:currView === 'ABOUT ME' ? '#ffffff' : null}}>ABOUT ME</h2>
+                        style={{color:currView === scrollRefABOUTME ? '#ffffff' : null}}>ABOUT ME</h2>
                 </div>
                 <div className={`${styles.menuOptions} ${darkMode ? styles.menuOptionsDark : ''}`}
-                    onClick={e => setCurrView('PROJECTS')} style={{borderBottom:currView === 'PROJECTS' ? '1px solid #ffffff' : null}}>
+                    onClick={e => setCurrView(scrollRefPROJECTS)} style={{borderBottom:currView === scrollRefPROJECTS.current ? '1px solid #ffffff' : null}}>
                     <h2 className={`${styles.menuOptionsText} ${darkMode ? styles.menuOptionsTextDark : ''}`}
-                        style={{color:currView === 'PROJECTS' ? '#ffffff' : null}}>PROJECTS</h2>
+                        style={{color:currView === scrollRefPROJECTS ? '#ffffff' : null}}>PROJECTS</h2>
                 </div>
                 <div className={`${styles.menuOptions} ${darkMode ? styles.menuOptionsDark : ''}`}
-                    onClick={e => setCurrView('EXPERIENCE')} style={{borderBottom:currView === 'EXPERIENCE' ? '1px solid #ffffff' : null}}>
+                    onClick={e => setCurrView(scrollRefEXPERIENCE)} style={{borderBottom:currView === scrollRefEXPERIENCE.current ? '1px solid #ffffff' : null}}>
                     <h2 className={`${styles.menuOptionsText} ${darkMode ? styles.menuOptionsTextDark : ''}`}
-                        style={{color:currView === 'EXPERIENCE' ? '#ffffff' : null}}>EXPERIENCE</h2>
+                        style={{color:currView === scrollRefEXPERIENCE ? '#ffffff' : null}}>EXPERIENCE</h2>
                 </div>
             </div>}
         </div>
