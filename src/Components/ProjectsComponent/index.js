@@ -7,7 +7,8 @@ export default function ProjectsComponent({scrollRefPROJECTS}) {
     const {darkMode} = useSelector(store => store.darkMode);
     const projects =[{'title' : 'My Portfolio','link' : 'https://shivakale.netlify.app/','img':'MyPortfolio.png', 'desc' : 'This is all of the professional experience I have as a web developer.'},
                     {'title' : 'Divine Classical Homeopathy','link' : 'https://divineclassicalhomoeopathy.com/','img':'divineClassicalHomeopathy.png', 'desc' : 'It is a website I have built as a freelance web developer, for a homeopathy clinic.'},
-                    {'title' : 'Storry Teller','link' : 'https://storryteller.netlify.app/','img':'StorryTellerImg.png', 'desc' : "It's an open-source version of writing, where you can contribute and accept contributions."}];
+                    {'title' : 'Storry Teller','link' : 'https://storryteller.netlify.app/','img':'StorryTellerImg.png', 'desc' : "It's an open-source version of writing, where you can contribute and accept contributions."},
+                    {'title' : 'FoodGods','link' : 'https://foodgods.netlify.app/','img':'foodGods.png', 'desc' : "Add yu special recipes, to make everyone's recipes special"}];
 
     return (
         <div className={styles.wholeCont} ref={scrollRefPROJECTS}>

@@ -25,11 +25,8 @@ export default function Layout({children}) {
         darkMode === true ? dispatch(darkModeOffAction()) : dispatch(darkModeOnAction());
     }
 
-    const [currView , setCurrView] = useState('ME');
+    const [currView , setCurrView] = useState(scrollRefME);
     const [contactMe , setContactMe] = useState(false);
-
-    // const [scrollDirection, setScrollDirection] = useState('UP');
-    // const [prevScrollPos, setPrevScrollPos] = useState(0);
 
     const [mousePos, setMousePos] = useState({x:60, y:60});
 
@@ -37,50 +34,54 @@ export default function Layout({children}) {
     const [scrollUp, setScrollUp] = useState(0);
 
     const [viewWidth, setViewWidth] = useState();
+    const [viewHeight, setViewHeight] = useState();
 
     useEffect(() => {
-            setTotalHeight(document.getElementById('layoutId').offsetHeight - window.innerHeight )
-    },[])
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        }
+        const observer = new IntersectionObserver(([entry]) => {
+            if(entry.isIntersecting) {
+                setCurrView(entry.target);
+                // observer.unobserve(currView.current);
+            }
+        }, options)
+
+        document.addEventListener('scroll' , () => {
+            if(scrollRefME.current)
+                observer.observe(scrollRefME.current);
+            if(scrollRefABOUTME.current)
+                observer.observe(scrollRefABOUTME.current);
+            if(scrollRefEXPERIENCE.current)
+                observer.observe(scrollRefEXPERIENCE.current);
+            if(scrollRefPROJECTS.current)
+                observer.observe(scrollRefPROJECTS.current);
+        })
+        
+        return (() => {
+            document.removeEventListener('scroll', () => {
+                if(scrollRefME.current)
+                    observer.unobserve(scrollRefME.current);
+                if(scrollRefABOUTME.current)
+                    observer.unobserve(scrollRefABOUTME.current);
+                if(scrollRefEXPERIENCE.scrollRefEXPERIENCE)
+                    observer.unobserve(scrollRefME.current);
+                if(scrollRefPROJECTS.current)
+                    observer.unobserve(scrollRefPROJECTS.current);
+            });
+        })
+    });
 
     useEffect(() => {
+        setTotalHeight(document.getElementById('layoutId').offsetHeight - window.innerHeight )
         setViewWidth(window.innerWidth);
+        setViewHeight(window.innerHeight);
+        setMousePos({x:document.body.clientX, y: document.body.clientY});
     },[])
 
     useEffect(() => {
-            setMousePos({x:document.body.clientX, y: document.body.clientY});
-
-    },[])
-
-    // useEffect(() => {
-
-    //     const scrollHandler = () => {
-    //         const currScrollPos = window.scrollY;
-    //         if (currScrollPos > prevScrollPos){
-    //             setScrollDirection('DOWN');
-    //             setPrevScrollPos(currScrollPos);
-    //         }
-    //         else if( currScrollPos < prevScrollPos){
-    //             setScrollDirection('UP');
-    //             setPrevScrollPos(currScrollPos);
-    //         }
-
-    //         // setPrevScrollPos(currScrollPos);
-
-    //         console.log(currScrollPos , " ", prevScrollPos);
-    //         console.log(scrollDirection);
-    //     }
-        
-    //     document.addEventListener("scroll", scrollHandler);
-    //     return () => document.removeEventListener("scroll", scrollHandler);
-    // },[])
-
-    // useEffect(() => {
-    //     setPrevScrollPos(window.screenY);
-    //     console.log(scrollDirection)
-    // },[scrollDirection])
-
-    useEffect(() => {
-        
         const scrollListener = (e) => {
             setScrollUp(window.scrollY);
         }
@@ -89,7 +90,6 @@ export default function Layout({children}) {
         return(() => {
             document.removeEventListener("scroll", scrollListener);
         })
-
     },[])
 
 
@@ -100,7 +100,9 @@ export default function Layout({children}) {
         };
 
         document.body.addEventListener('mousemove', updateMouseLoc);
-        return () => { document.body.removeEventListener('mousemove',updateMouseLoc); }
+        return (() => {
+            document.body.removeEventListener('mousemove',updateMouseLoc);
+        })
     },[]);
 
     const updateMouseLocClick = (e) => {
@@ -142,12 +144,13 @@ export default function Layout({children}) {
                 scrollRefME={scrollRefME} scrollRefPROJECTS={scrollRefPROJECTS} scrollRefABOUTME={scrollRefABOUTME} scrollRefEXPERIENCE={scrollRefEXPERIENCE}
             />
             <div className={`${styles.darkModeCont} ${darkMode ? styles.darkModeContOn : ''}`} onClick={e => darkModeHandler()}>
-                <div className={`${styles.darkModeSun} ${darkMode ? styles.darkModeMoon : ''}`}>
-                </div>
+                <div className={`${styles.darkModeSun} ${darkMode ? styles.darkModeMoon : ''}`} />
             </div>
             <div className={styles.Cont}>
                 {/* <main>{children}</main> */}
-                <HomeComponent scrollRefME={scrollRefME} scrollUp={scrollUp}/>
+                <HomeComponent scrollRefME={scrollRefME} scrollUp={scrollUp} 
+                    mousePos={mousePos} viewWidth={viewWidth} viewHeight={viewHeight}
+                />
                 <AboutMeComponent scrollRefABOUTME={scrollRefABOUTME} />
                 <ProjectsComponent scrollRefPROJECTS={scrollRefPROJECTS}/>
                 <ContactMe contactMe={contactMe} setContactMe={setContactMe}/>

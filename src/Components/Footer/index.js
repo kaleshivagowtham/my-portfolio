@@ -33,19 +33,19 @@ export default function Footer() {
                     <p className={styles.topContText3}> Social</p>
                     <div className={styles.topRightSocialCont}>
                         <a href='https://www.linkedin.com/in/shivagowthamkale/' className={`${styles.topRightSocialEachCont} ${darkMode ? styles.topRightSocialEachContDark : ''}`} target='_blank'>
-                            <img src='/facebookLogo.png' className={styles.topRightSocialEachImg} alt='Facebook logo' />
-                        </a>
-                        <a href='https://www.linkedin.com/in/shivagowthamkale/' className={`${styles.topRightSocialEachCont} ${darkMode ? styles.topRightSocialEachContDark : ''}`} target='_blank'>
                             <img src='/linkedinLogo.png' className={styles.topRightSocialEachImg} alt='Linkedin logo' />
                         </a>
-                        <a href='https://www.linkedin.com/in/shivagowthamkale/' className={`${styles.topRightSocialEachCont} ${darkMode ? styles.topRightSocialEachContDark : ''}`} target='_blank'>
-                            <img src='/twitterLogo.png' className={styles.topRightSocialEachImg} alt='Facebook logo' />
+                        <a href='https://www.instagram.com/shivagowthamkale/' className={`${styles.topRightSocialEachCont} ${darkMode ? styles.topRightSocialEachContDark : ''}`} target='_blank'>
+                            <img src='/instagramLogo.png' className={styles.topRightSocialEachImg} alt='Instagram logo' />
+                        </a>
+                        <a href='https://twitter.com/GowthamKale' className={`${styles.topRightSocialEachCont} ${darkMode ? styles.topRightSocialEachContDark : ''}`} target='_blank'>
+                            <img src='/twitterLogo.png' className={styles.topRightSocialEachImg} alt='Instagram logo' />
                         </a>
                     </div>
                 </div>
             </div>
             <div className={styles.bottomCont}>
-                <p className={styles.bottomContText1}> © Copyright 2023, Made by</p>
+                <p className={styles.bottomContText1}> © Copyright 2024, Made by</p>
                 <Link className={styles.bottomContText2} href='https://shivakale.netlify.app/'>Shiva Gowtham Kale</Link>
             </div>
         </div>
