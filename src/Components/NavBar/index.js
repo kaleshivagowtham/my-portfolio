@@ -42,7 +42,7 @@ export default function NavBar({scrollUp,currView, setCurrView, scrollRefME, scr
         <div className={`${styles.wholeCont} ${darkMode ? styles.wholeContDark : ''} ${scrollUp ? (darkMode ? styles.wholeContDarkOnScroll : '') : ''} `}>
             <Link href='/' className={styles.logoCont}>
                 <img className={styles.logoImg} src='/EWHW_final_logo_white.png' alt='logo'/>
-                <h1 className={styles.logoText}>Shiva Gowtham Kale</h1>
+                <h1 className={styles.logoText}>S.G.K</h1>
             </Link> 
             <div className={styles.menuImg} onClick={e => setOpenMenu(!openMenu)} style={{alignItems: openMenu ? 'center' : null}}>
                 <div className={styles.menuImgEndLine} style={endLineTopStyle}></div>
